@@ -165,7 +165,7 @@ cython_debug/
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/workspace.xml
-.idea\misc.xml
+.idea/misc.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
