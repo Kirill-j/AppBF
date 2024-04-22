@@ -15,9 +15,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QButtonGroup, QGroupBox, QHBoxLayout,
-    QLabel, QLineEdit, QPushButton, QRadioButton,
-    QSizePolicy, QTabWidget, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QGroupBox, QHBoxLayout, QLabel,
+    QLineEdit, QPushButton, QRadioButton, QSizePolicy,
+    QTabWidget, QVBoxLayout, QWidget)
 
 class Ui_Widget(object):
     def setupUi(self, Widget):
@@ -361,15 +361,11 @@ class Ui_Widget(object):
         self.verticalLayout_11 = QVBoxLayout(self.group_box_x)
         self.verticalLayout_11.setObjectName(u"verticalLayout_11")
         self.radio_button_5_x_fict = QRadioButton(self.group_box_x)
-        self.button_group_x = QButtonGroup(Widget)
-        self.button_group_x.setObjectName(u"button_group_x")
-        self.button_group_x.addButton(self.radio_button_5_x_fict)
         self.radio_button_5_x_fict.setObjectName(u"radio_button_5_x_fict")
 
         self.verticalLayout_11.addWidget(self.radio_button_5_x_fict)
 
         self.radio_button_5_x_su = QRadioButton(self.group_box_x)
-        self.button_group_x.addButton(self.radio_button_5_x_su)
         self.radio_button_5_x_su.setObjectName(u"radio_button_5_x_su")
 
         self.verticalLayout_11.addWidget(self.radio_button_5_x_su)
@@ -382,15 +378,11 @@ class Ui_Widget(object):
         self.verticalLayout_12 = QVBoxLayout(self.group_box_y)
         self.verticalLayout_12.setObjectName(u"verticalLayout_12")
         self.radio_button_5_y_fict = QRadioButton(self.group_box_y)
-        self.button_group_y = QButtonGroup(Widget)
-        self.button_group_y.setObjectName(u"button_group_y")
-        self.button_group_y.addButton(self.radio_button_5_y_fict)
         self.radio_button_5_y_fict.setObjectName(u"radio_button_5_y_fict")
 
         self.verticalLayout_12.addWidget(self.radio_button_5_y_fict)
 
         self.radio_button_5_y_su = QRadioButton(self.group_box_y)
-        self.button_group_y.addButton(self.radio_button_5_y_su)
         self.radio_button_5_y_su.setObjectName(u"radio_button_5_y_su")
 
         self.verticalLayout_12.addWidget(self.radio_button_5_y_su)
@@ -403,15 +395,11 @@ class Ui_Widget(object):
         self.verticalLayout_13 = QVBoxLayout(self.group_box_z)
         self.verticalLayout_13.setObjectName(u"verticalLayout_13")
         self.radio_button_5_z_fict = QRadioButton(self.group_box_z)
-        self.button_group_z = QButtonGroup(Widget)
-        self.button_group_z.setObjectName(u"button_group_z")
-        self.button_group_z.addButton(self.radio_button_5_z_fict)
         self.radio_button_5_z_fict.setObjectName(u"radio_button_5_z_fict")
 
         self.verticalLayout_13.addWidget(self.radio_button_5_z_fict)
 
         self.radio_button_5_z_su = QRadioButton(self.group_box_z)
-        self.button_group_z.addButton(self.radio_button_5_z_su)
         self.radio_button_5_z_su.setObjectName(u"radio_button_5_z_su")
 
         self.verticalLayout_13.addWidget(self.radio_button_5_z_su)
@@ -577,7 +565,7 @@ class Ui_Widget(object):
 
         self.retranslateUi(Widget)
 
-        Widget.setCurrentIndex(0)
+        Widget.setCurrentIndex(4)
 
 
         QMetaObject.connectSlotsByName(Widget)

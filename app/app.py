@@ -107,26 +107,23 @@ class Application(QTabWidget, Ui_Widget):
             self.answer_4.setText("Wrong!")
 
     def exercise_5(self):
-        buttons = [self.radio_button_5_x_su, self.radio_button_5_x_fict, self.radio_button_5_y_su,
-                   self.radio_button_5_y_fict, self.radio_button_5_z_su, self.radio_button_5_z_fict]
-
-        button_groups = [self.button_group_x, self.button_group_y, self.button_group_z]
-
-        # Делает все радио-кнопки не нажатыми
-        for group in button_groups:
-            group.setExclusive(False)
-        for button in buttons:
-            button.setChecked(False)
-        for group in button_groups:
-            group.setExclusive(True)
+        self.answer_5.clear()
+        self.answer_5.setText(self.answer)
+        for radio_buttons in (self.radio_button_5_x_fict, self.radio_button_5_x_su,
+                              self.radio_button_5_y_fict, self.radio_button_5_y_su,
+                              self.radio_button_5_z_fict, self.radio_button_5_z_su):
+            radio_buttons.setAutoExclusive(False)
+            radio_buttons.setChecked(False)
+            radio_buttons.setAutoExclusive(True)
 
         self.label_5_func.setText(functions.func_of_3_arg())
-        self.answer_5.clear()
 
     def exercise_5_check(self):
         if self.label_5_func.text() == 'Вектор':
             return self.answer_5.setText("Вы не нажали старт")
-        if self.button_group_x.checkedButton() is None or self.button_group_y.checkedButton() is None or self.button_group_z.checkedButton() is None:
+        if not ((self.radio_button_5_x_su.isChecked() or self.radio_button_5_x_fict.isChecked()) and (
+                self.radio_button_5_y_su.isChecked() or self.radio_button_5_y_fict.isChecked()) and (
+                        self.radio_button_5_z_su.isChecked() or self.radio_button_5_z_fict.isChecked())):
             return self.answer_5.setText("Выберите каждую переменную")
         func = self.label_5_func.text()
 
