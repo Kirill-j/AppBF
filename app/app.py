@@ -30,18 +30,11 @@ class Application(QTabWidget, Ui_Widget):
         self.button_enter_8.clicked.connect(self.exercise_8)
         self.button_enter_9.clicked.connect(self.exercise_9)
 
-        # self.radio_button_5_x_su.clicked.connect()
-        # self.radio_button_5_x_fict.clicked.connect()
-        # self.radio_button_5_y_su.clicked.connect()
-        # self.radio_button_5_y_fict.clicked.connect()
-        # self.radio_button_5_z_su.clicked.connect()
-        # self.radio_button_5_z_fict.che
-
     def exercise_1(self):
         n = self.input_text_1.text()
         if n.isnumeric():
             n = int(n)
-            n = functions.spaces(functions.get_func(n), n-2)
+            n = functions.spaces(functions.get_func(n), n - 2)
             self.answer_1.setText(self.answer + n)
         else:
             functions.error_value(self.answer_1)
@@ -55,7 +48,7 @@ class Application(QTabWidget, Ui_Widget):
             sigma = int(sigma)
             arg_number = int(arg_number)
             res_func = functions.residual_function(func_vector, sigma, arg_number)
-            res_func = functions.spaces(res_func,arg_number-1)
+            res_func = functions.spaces(res_func, arg_number - 1)
             self.answer_2.setText(self.answer + res_func)
         else:
             functions.error_value(self.answer_2)
@@ -115,7 +108,7 @@ class Application(QTabWidget, Ui_Widget):
             radio_buttons.setAutoExclusive(False)
             radio_buttons.setChecked(False)
             radio_buttons.setAutoExclusive(True)
-        self.label_5_func.setText(functions.get_func(3))
+        self.label_5_func.setText(functions.spaces(functions.get_func(3)))
         self.answer_5.clear()
 
     def exercise_5_check(self):
@@ -124,8 +117,25 @@ class Application(QTabWidget, Ui_Widget):
         if not ((self.radio_button_5_x_su.isChecked() or self.radio_button_5_x_fict.isChecked()) and (
                 self.radio_button_5_y_su.isChecked() or self.radio_button_5_y_fict.isChecked()) and (
                         self.radio_button_5_z_su.isChecked() or self.radio_button_5_z_fict.isChecked())):
-            self.answer_5.setText("Выберите каждую переменную")
+            return self.answer_5.setText("Выберите каждую переменную")
+
         func = self.label_5_func.text()
+        x_0 = functions.residual_function(func, 0, 1)
+        x_1 = functions.residual_function(func, 1, 1)
+        y_0 = functions.residual_function(func, 0, 2)
+        y_1 = functions.residual_function(func, 1, 2)
+        z_0 = functions.residual_function(func, 0, 3)
+        z_1 = functions.residual_function(func, 1, 3)
+        x = 0 if x_0 == x_1 else 1
+        y = 0 if y_0 == y_1 else 1
+        z = 0 if z_0 == z_1 else 1
+
+        if (self.radio_button_5_x_fict.isChecked() and x == 0 or self.radio_button_5_x_su.isChecked() and x == 1) and (
+                self.radio_button_5_y_fict.isChecked() and y == 0 or self.radio_button_5_y_su.isChecked() and y == 1) and (
+                self.radio_button_5_z_fict.isChecked() and z == 0 or self.radio_button_5_z_su.isChecked() and z == 1):
+            return self.answer_5.setText("Right !")
+        else:
+            return self.answer_5.setText("Wrong")
 
     def exercise_6(self):
         bin_func = str(functions.get_func(3))

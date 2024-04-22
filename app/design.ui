@@ -473,19 +473,13 @@ QTabBar {
            <property name="text">
             <string>Фиктивная</string>
            </property>
-           <attribute name="buttonGroup">
-            <string notr="true">button_group_x</string>
-           </attribute>
           </widget>
          </item>
          <item>
           <widget class="QRadioButton" name="radio_button_5_x_su">
            <property name="text">
-            <string>Сущетвенная</string>
+            <string>Сущеcтвенная</string>
            </property>
-           <attribute name="buttonGroup">
-            <string notr="true">button_group_x</string>
-           </attribute>
           </widget>
          </item>
         </layout>
@@ -502,19 +496,13 @@ QTabBar {
            <property name="text">
             <string>Фиктивная</string>
            </property>
-           <attribute name="buttonGroup">
-            <string notr="true">button_group_y</string>
-           </attribute>
           </widget>
          </item>
          <item>
           <widget class="QRadioButton" name="radio_button_5_y_su">
            <property name="text">
-            <string>Сущетвенная</string>
+            <string>Сущеcтвенная</string>
            </property>
-           <attribute name="buttonGroup">
-            <string notr="true">button_group_y</string>
-           </attribute>
           </widget>
          </item>
         </layout>
@@ -531,19 +519,13 @@ QTabBar {
            <property name="text">
             <string>Фиктивная</string>
            </property>
-           <attribute name="buttonGroup">
-            <string notr="true">button_group_z</string>
-           </attribute>
           </widget>
          </item>
          <item>
           <widget class="QRadioButton" name="radio_button_5_z_su">
            <property name="text">
-            <string>Сущетвенная</string>
+            <string>Сущеcтвенная</string>
            </property>
-           <attribute name="buttonGroup">
-            <string notr="true">button_group_z</string>
-           </attribute>
           </widget>
          </item>
         </layout>
@@ -789,9 +771,4 @@ QTabBar {
  </widget>
  <resources/>
  <connections/>
- <buttongroups>
-  <buttongroup name="button_group_x"/>
-  <buttongroup name="button_group_y"/>
-  <buttongroup name="button_group_z"/>
- </buttongroups>
 </ui>
