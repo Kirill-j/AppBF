@@ -64,10 +64,8 @@ def func_of_2_arg():
 
 
 def func_of_3_arg():
-    bin_func = []
     n = random.randint(0, 256)
-    bin_func.append(bin(n)[2:].zfill(8))
-    return random.choice(bin_func)
+    return bin(n)[2:].zfill(8)
 
 
 def dnf(bin_func):
