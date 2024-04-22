@@ -14,7 +14,8 @@ def residual_function(vector, sig, arg):
                 res_func.extend(new_vector[i])
     return ''.join(res_func)
 
-def game_5(vector):
+# Вычисляет существенные и фиктивные переменные
+def significant_or_dummy_variable(vector):
     zero_res_func = residual_function(vector, 0, 3)
     single_res_func = residual_function(vector, 1, 3)
     lst = [[zero_res_func], [single_res_func]]
@@ -27,7 +28,6 @@ def game_5(vector):
             fict.append(i + 1)
         else:
             sush.append(i + 1)
-    print(fict)
-    print(sush)
+    return fict, sush
 
-game_5("11101011")
+print(*significant_or_dummy_variable("11101011"))

@@ -70,6 +70,23 @@ def func_of_2_arg():
     return bin_func
 
 
+# Вычисляет существенные и фиктивные переменные
+def significant_or_dummy_variable(vector):
+    zero_res_func = residual_function(vector, 0, 3)
+    single_res_func = residual_function(vector, 1, 3)
+    lst = [[zero_res_func], [single_res_func]]
+    print(zero_res_func)
+    print(single_res_func)
+    fict = []
+    sush = []
+    for i in range(len(zero_res_func)):
+        if zero_res_func[i] == single_res_func[i]:
+            fict.append(i + 1)
+        else:
+            sush.append(i + 1)
+    return fict, sush
+
+
 def dnf(bin_func):
     # Предполагая, что bin_func представляет собой список двоичных строк, представляющих таблицы истинности
     dnf_terms = []
