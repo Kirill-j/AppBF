@@ -15,9 +15,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QHBoxLayout, QLabel, QLineEdit,
-    QPushButton, QSizePolicy, QTabWidget, QVBoxLayout,
-    QWidget)
+from PySide6.QtWidgets import (QApplication, QGroupBox, QHBoxLayout, QLabel,
+    QLineEdit, QPushButton, QRadioButton, QSizePolicy,
+    QTabWidget, QVBoxLayout, QWidget)
 
 class Ui_Widget(object):
     def setupUi(self, Widget):
@@ -314,17 +314,101 @@ class Ui_Widget(object):
         Widget.addTab(self.tab_4, "")
         self.tab_5 = QWidget()
         self.tab_5.setObjectName(u"tab_5")
-        self.verticalLayout_11 = QVBoxLayout(self.tab_5)
-        self.verticalLayout_11.setObjectName(u"verticalLayout_11")
+        self.verticalLayout_15 = QVBoxLayout(self.tab_5)
+        self.verticalLayout_15.setObjectName(u"verticalLayout_15")
+        self.task_5 = QLabel(self.tab_5)
+        self.task_5.setObjectName(u"task_5")
+        self.task_5.setWordWrap(True)
+
+        self.verticalLayout_15.addWidget(self.task_5)
+
+        self.horizontalLayout_9 = QHBoxLayout()
+        self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
+        self.verticalLayout_14 = QVBoxLayout()
+        self.verticalLayout_14.setObjectName(u"verticalLayout_14")
+        self.button_start_5 = QPushButton(self.tab_5)
+        self.button_start_5.setObjectName(u"button_start_5")
+
+        self.verticalLayout_14.addWidget(self.button_start_5, 0, Qt.AlignmentFlag.AlignLeft)
+
         self.button_enter_5 = QPushButton(self.tab_5)
         self.button_enter_5.setObjectName(u"button_enter_5")
 
-        self.verticalLayout_11.addWidget(self.button_enter_5)
+        self.verticalLayout_14.addWidget(self.button_enter_5, 0, Qt.AlignmentFlag.AlignLeft)
 
-        self.label_5 = QLabel(self.tab_5)
-        self.label_5.setObjectName(u"label_5")
 
-        self.verticalLayout_11.addWidget(self.label_5)
+        self.horizontalLayout_9.addLayout(self.verticalLayout_14)
+
+        self.label_5_func = QLabel(self.tab_5)
+        self.label_5_func.setObjectName(u"label_5_func")
+
+        self.horizontalLayout_9.addWidget(self.label_5_func, 0, Qt.AlignmentFlag.AlignHCenter)
+
+        self.horizontalLayout_9.setStretch(1, 1)
+
+        self.verticalLayout_15.addLayout(self.horizontalLayout_9)
+
+        self.answer_5 = QLabel(self.tab_5)
+        self.answer_5.setObjectName(u"answer_5")
+        self.answer_5.setWordWrap(True)
+
+        self.verticalLayout_15.addWidget(self.answer_5, 0, Qt.AlignmentFlag.AlignHCenter)
+
+        self.horizontalLayout_8 = QHBoxLayout()
+        self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
+        self.group_box_x = QGroupBox(self.tab_5)
+        self.group_box_x.setObjectName(u"group_box_x")
+        self.verticalLayout_11 = QVBoxLayout(self.group_box_x)
+        self.verticalLayout_11.setObjectName(u"verticalLayout_11")
+        self.radio_button_5_x_fict = QRadioButton(self.group_box_x)
+        self.radio_button_5_x_fict.setObjectName(u"radio_button_5_x_fict")
+
+        self.verticalLayout_11.addWidget(self.radio_button_5_x_fict)
+
+        self.radio_button_5_x_su = QRadioButton(self.group_box_x)
+        self.radio_button_5_x_su.setObjectName(u"radio_button_5_x_su")
+
+        self.verticalLayout_11.addWidget(self.radio_button_5_x_su)
+
+
+        self.horizontalLayout_8.addWidget(self.group_box_x)
+
+        self.group_box_y = QGroupBox(self.tab_5)
+        self.group_box_y.setObjectName(u"group_box_y")
+        self.verticalLayout_12 = QVBoxLayout(self.group_box_y)
+        self.verticalLayout_12.setObjectName(u"verticalLayout_12")
+        self.radio_button_5_y_fict_2 = QRadioButton(self.group_box_y)
+        self.radio_button_5_y_fict_2.setObjectName(u"radio_button_5_y_fict_2")
+
+        self.verticalLayout_12.addWidget(self.radio_button_5_y_fict_2)
+
+        self.radio_button_5_y_su_2 = QRadioButton(self.group_box_y)
+        self.radio_button_5_y_su_2.setObjectName(u"radio_button_5_y_su_2")
+
+        self.verticalLayout_12.addWidget(self.radio_button_5_y_su_2)
+
+
+        self.horizontalLayout_8.addWidget(self.group_box_y)
+
+        self.group_box_z = QGroupBox(self.tab_5)
+        self.group_box_z.setObjectName(u"group_box_z")
+        self.verticalLayout_13 = QVBoxLayout(self.group_box_z)
+        self.verticalLayout_13.setObjectName(u"verticalLayout_13")
+        self.radio_button_5_y_fict_3 = QRadioButton(self.group_box_z)
+        self.radio_button_5_y_fict_3.setObjectName(u"radio_button_5_y_fict_3")
+
+        self.verticalLayout_13.addWidget(self.radio_button_5_y_fict_3)
+
+        self.radio_button_5_y_su_3 = QRadioButton(self.group_box_z)
+        self.radio_button_5_y_su_3.setObjectName(u"radio_button_5_y_su_3")
+
+        self.verticalLayout_13.addWidget(self.radio_button_5_y_su_3)
+
+
+        self.horizontalLayout_8.addWidget(self.group_box_z)
+
+
+        self.verticalLayout_15.addLayout(self.horizontalLayout_8)
 
         Widget.addTab(self.tab_5, "")
         self.tab_6 = QWidget()
@@ -529,8 +613,20 @@ class Ui_Widget(object):
         self.btn_ans_4_15.setText("")
         self.btn_ans_4_16.setText("")
         Widget.setTabText(Widget.indexOf(self.tab_4), QCoreApplication.translate("Widget", u"4", None))
-        self.button_enter_5.setText(QCoreApplication.translate("Widget", u"\u041d\u0430\u0436\u043c\u0438 \u043c\u0435\u043d\u044f", None))
-        self.label_5.setText(QCoreApplication.translate("Widget", u"TextLabel", None))
+        self.task_5.setText(QCoreApplication.translate("Widget", u"\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0435 \u0438 \u0444\u0438\u043a\u0442\u0438\u0432\u043d\u044b\u0435 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0435", None))
+        self.button_start_5.setText(QCoreApplication.translate("Widget", u"Start", None))
+        self.button_enter_5.setText(QCoreApplication.translate("Widget", u"Enter", None))
+        self.label_5_func.setText(QCoreApplication.translate("Widget", u"\u0412\u0435\u043a\u0442\u043e\u0440", None))
+        self.answer_5.setText(QCoreApplication.translate("Widget", u"answer", None))
+        self.group_box_x.setTitle(QCoreApplication.translate("Widget", u"X", None))
+        self.radio_button_5_x_fict.setText(QCoreApplication.translate("Widget", u"\u0424\u0438\u043a\u0442\u0438\u0432\u043d\u0430\u044f", None))
+        self.radio_button_5_x_su.setText(QCoreApplication.translate("Widget", u"\u0421\u0443\u0449\u0435\u0442\u0432\u0435\u043d\u043d\u0430\u044f", None))
+        self.group_box_y.setTitle(QCoreApplication.translate("Widget", u"Y", None))
+        self.radio_button_5_y_fict_2.setText(QCoreApplication.translate("Widget", u"\u0424\u0438\u043a\u0442\u0438\u0432\u043d\u0430\u044f", None))
+        self.radio_button_5_y_su_2.setText(QCoreApplication.translate("Widget", u"\u0421\u0443\u0449\u0435\u0442\u0432\u0435\u043d\u043d\u0430\u044f", None))
+        self.group_box_z.setTitle(QCoreApplication.translate("Widget", u"Z", None))
+        self.radio_button_5_y_fict_3.setText(QCoreApplication.translate("Widget", u"\u0424\u0438\u043a\u0442\u0438\u0432\u043d\u0430\u044f", None))
+        self.radio_button_5_y_su_3.setText(QCoreApplication.translate("Widget", u"\u0421\u0443\u0449\u0435\u0442\u0432\u0435\u043d\u043d\u0430\u044f", None))
         Widget.setTabText(Widget.indexOf(self.tab_5), QCoreApplication.translate("Widget", u"5", None))
         self.task_6.setText(QCoreApplication.translate("Widget", u"\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0414\u041d\u0424 \u0444\u0443\u043d\u043a\u0446\u0438\u0438", None))
         self.label_function_6.setText(QCoreApplication.translate("Widget", u"\u0424\u0443\u043d\u043a\u0446\u0438\u044f", None))

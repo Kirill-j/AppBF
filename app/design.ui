@@ -410,20 +410,128 @@ QTabBar {
    <attribute name="title">
     <string>5</string>
    </attribute>
-   <layout class="QVBoxLayout" name="verticalLayout_11">
+   <layout class="QVBoxLayout" name="verticalLayout_15">
     <item>
-     <widget class="QPushButton" name="button_enter_5">
+     <widget class="QLabel" name="task_5">
       <property name="text">
-       <string>Нажми меня</string>
+       <string>Выберите существенные и фиктивные переменные</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="label_5">
+     <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="0,1">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_14">
+        <item alignment="Qt::AlignmentFlag::AlignLeft">
+         <widget class="QPushButton" name="button_start_5">
+          <property name="text">
+           <string>Start</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignLeft">
+         <widget class="QPushButton" name="button_enter_5">
+          <property name="text">
+           <string>Enter</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item alignment="Qt::AlignmentFlag::AlignHCenter">
+       <widget class="QLabel" name="label_5_func">
+        <property name="text">
+         <string>Вектор</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item alignment="Qt::AlignmentFlag::AlignHCenter">
+     <widget class="QLabel" name="answer_5">
       <property name="text">
-       <string>TextLabel</string>
+       <string>answer</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
       </property>
      </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_8">
+      <item>
+       <widget class="QGroupBox" name="group_box_x">
+        <property name="title">
+         <string>X</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_11">
+         <item>
+          <widget class="QRadioButton" name="radio_button_5_x_fict">
+           <property name="text">
+            <string>Фиктивная</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radio_button_5_x_su">
+           <property name="text">
+            <string>Сущетвенная</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="group_box_y">
+        <property name="title">
+         <string>Y</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_12">
+         <item>
+          <widget class="QRadioButton" name="radio_button_5_y_fict_2">
+           <property name="text">
+            <string>Фиктивная</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radio_button_5_y_su_2">
+           <property name="text">
+            <string>Сущетвенная</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="group_box_z">
+        <property name="title">
+         <string>Z</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_13">
+         <item>
+          <widget class="QRadioButton" name="radio_button_5_y_fict_3">
+           <property name="text">
+            <string>Фиктивная</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radio_button_5_y_su_3">
+           <property name="text">
+            <string>Сущетвенная</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
