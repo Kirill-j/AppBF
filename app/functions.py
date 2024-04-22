@@ -2,6 +2,13 @@ import random
 import numpy as np
 
 
+# Возвращает булеву вектор-функцию от n аргументов
+def get_func(n):
+    k = 2 ** (2 ** n) - 1
+    randon_int = random.randint(0, k)
+    return bin(randon_int)[2:].zfill(2 ** n)
+
+
 # Выводит сообщение об ошибке ввода
 def error_value(label_for_input):
     label_for_input.setText("Invalid value!\nPlease re-enter the value.")
@@ -61,11 +68,6 @@ def func_of_2_arg():
     for i in range(16):
         bin_func[bin_name[i]] = bin(i)[2:].zfill(4)
     return bin_func
-
-
-def func_of_3_arg():
-    n = random.randint(0, 256)
-    return bin(n)[2:].zfill(8)
 
 
 def dnf(bin_func):
