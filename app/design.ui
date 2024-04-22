@@ -176,7 +176,7 @@ QTabBar {
     <item>
      <widget class="QLabel" name="task_3">
       <property name="text">
-       <string>На вход — два вектора (это нулевая и единичная остаточные функции по некоторому аргументу), номер аргумента, на выход — вектор функции</string>
+       <string>На вход — вектор функции, 0 или 1, номер аргумента, на выход — соответствующая остаточная</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
