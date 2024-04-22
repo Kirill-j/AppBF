@@ -116,16 +116,10 @@ class Application(QTabWidget, Ui_Widget):
                         self.radio_button_5_z_su.isChecked() or self.radio_button_5_z_fict.isChecked())):
             return self.answer_5.setText("Выберите каждую переменную")
 
-        func = self.label_5_func.text()
-        x_0 = functions.residual_function(func, 0, 1)
-        x_1 = functions.residual_function(func, 1, 1)
-        y_0 = functions.residual_function(func, 0, 2)
-        y_1 = functions.residual_function(func, 1, 2)
-        z_0 = functions.residual_function(func, 0, 3)
-        z_1 = functions.residual_function(func, 1, 3)
-        x = 0 if x_0 == x_1 else 1
-        y = 0 if y_0 == y_1 else 1
-        z = 0 if z_0 == z_1 else 1
+        func = self.label_5_func.text().replace(' ', '')
+        x = functions.check_fict_of_significant(func, 1)
+        y = functions.check_fict_of_significant(func, 2)
+        z = functions.check_fict_of_significant(func, 3)
 
         if (self.radio_button_5_x_fict.isChecked() and x == 0 or self.radio_button_5_x_su.isChecked() and x == 1) and (
                 self.radio_button_5_y_fict.isChecked() and y == 0 or self.radio_button_5_y_su.isChecked() and y == 1) and (
