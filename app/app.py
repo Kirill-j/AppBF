@@ -41,7 +41,7 @@ class Application(QTabWidget, Ui_Widget):
         n = self.input_text_1.text()
         if n.isnumeric():
             n = int(n)
-            n = functions.spaces(bin(random.getrandbits(2 ** n))[2:].zfill(2 ** n), 4)
+            n = functions.spaces(functions.get_func(n), 4)
             self.answer_1.setText(self.answer + n)
         else:
             functions.error_value(self.answer_1)
@@ -109,13 +109,13 @@ class Application(QTabWidget, Ui_Widget):
     def exercise_5(self):
         self.answer_5.clear()
         self.answer_5.setText(self.answer)
-        for radio_buttons in (self.radio_button_5_x_fict, self.radio_button_5_x_su, 
-                              self.radio_button_5_y_fict, self.radio_button_5_y_su, 
+        for radio_buttons in (self.radio_button_5_x_fict, self.radio_button_5_x_su,
+                              self.radio_button_5_y_fict, self.radio_button_5_y_su,
                               self.radio_button_5_z_fict, self.radio_button_5_z_su):
             radio_buttons.setAutoExclusive(False)
             radio_buttons.setChecked(False)
             radio_buttons.setAutoExclusive(True)
-        self.label_5_func.setText(functions.func_of_3_arg())
+        self.label_5_func.setText(functions.get_func(3))
         self.answer_5.clear()
 
     def exercise_5_check(self):
@@ -128,7 +128,7 @@ class Application(QTabWidget, Ui_Widget):
         func = self.label_5_func.text()
 
     def exercise_6(self):
-        bin_func = str(functions.func_of_3_arg())
+        bin_func = str(functions.get_func(3))
         self.label_function_6.setText(bin_func)
         print(functions.dnf(bin_func))
 
@@ -149,7 +149,7 @@ class Application(QTabWidget, Ui_Widget):
             self.answer_6.setText(answer + "Wrong!")
 
     def exercise_7(self):
-        bin_func = str(functions.func_of_3_arg())
+        bin_func = str(functions.get_func(3))
         self.label_function_7.setText(bin_func)
         print(functions.cnf(bin_func))
 
