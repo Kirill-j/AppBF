@@ -247,7 +247,7 @@ QTabBar {
       <property name="bottomMargin">
        <number>50</number>
       </property>
-      <item>
+      <item alignment="Qt::AlignmentFlag::AlignHCenter">
        <widget class="QLabel" name="label_function_4">
         <property name="text">
          <string/>

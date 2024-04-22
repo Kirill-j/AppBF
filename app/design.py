@@ -195,7 +195,7 @@ class Ui_Widget(object):
         self.label_function_4.setObjectName(u"label_function_4")
         self.label_function_4.setWordWrap(True)
 
-        self.horizontalLayout_5.addWidget(self.label_function_4)
+        self.horizontalLayout_5.addWidget(self.label_function_4, 0, Qt.AlignmentFlag.AlignHCenter)
 
         self.answer_4 = QLabel(self.tab_4)
         self.answer_4.setObjectName(u"answer_4")
