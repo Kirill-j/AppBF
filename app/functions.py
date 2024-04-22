@@ -65,8 +65,8 @@ def func_of_2_arg():
 
 def func_of_3_arg():
     bin_func = []
-    for i in range(256):
-        bin_func.append(bin(i)[2:].zfill(8))
+    n = random.randint(0, 256)
+    bin_func.append(bin(n)[2:].zfill(8))
     return random.choice(bin_func)
 
 
