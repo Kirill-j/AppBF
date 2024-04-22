@@ -133,12 +133,9 @@ class Application(QTabWidget, Ui_Widget):
         f_y_1 = functions.residual_function(func, 1, 2)
         f_z_0 = functions.residual_function(func, 0, 3)
         f_z_1 = functions.residual_function(func, 1, 3)
-        x = 1
-        y = 1
-        z = 1
-        if f_x_0 == f_x_1: x = 0
-        if f_y_0 == f_y_1: y = 0
-        if f_z_0 == f_z_1: z = 0
+        x = 0 if f_x_0 == f_x_1 else 1
+        y = 0 if f_y_0 == f_y_1 else 1
+        z = 0 if f_z_0 == f_z_1 else 1
 
         if (self.radio_button_5_x_fict.isChecked() and x == 0 or self.radio_button_5_x_su.isChecked() and x == 1) and (
                 self.radio_button_5_y_fict.isChecked() and y == 0 or self.radio_button_5_y_su.isChecked() and y == 1) and (
