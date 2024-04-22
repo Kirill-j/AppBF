@@ -481,7 +481,7 @@ class Ui_Widget(object):
 
         self.retranslateUi(Widget)
 
-        Widget.setCurrentIndex(4)
+        Widget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(Widget)
@@ -501,7 +501,7 @@ class Ui_Widget(object):
         self.button_enter_2.setText(QCoreApplication.translate("Widget", u"Enter", None))
         self.answer_2.setText(QCoreApplication.translate("Widget", u"Answer: ", None))
         Widget.setTabText(Widget.indexOf(self.tab_2), QCoreApplication.translate("Widget", u"2", None))
-        self.task_3.setText(QCoreApplication.translate("Widget", u"\u041d\u0430 \u0432\u0445\u043e\u0434 \u2014 \u0432\u0435\u043a\u0442\u043e\u0440 \u0444\u0443\u043d\u043a\u0446\u0438\u0438, 0 \u0438\u043b\u0438 1, \u043d\u043e\u043c\u0435\u0440 \u0430\u0440\u0433\u0443\u043c\u0435\u043d\u0442\u0430, \u043d\u0430 \u0432\u044b\u0445\u043e\u0434 \u2014 \u0441\u043e\u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044e\u0449\u0430\u044f \u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u0430\u044f", None))
+        self.task_3.setText(QCoreApplication.translate("Widget", u"\u041d\u0430 \u0432\u0445\u043e\u0434 \u2014 \u0434\u0432\u0430 \u0432\u0435\u043a\u0442\u043e\u0440\u0430 (\u044d\u0442\u043e \u043d\u0443\u043b\u0435\u0432\u0430\u044f \u0438 \u0435\u0434\u0438\u043d\u0438\u0447\u043d\u0430\u044f \u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u044b\u0435 \u0444\u0443\u043d\u043a\u0446\u0438\u0438 \u043f\u043e \u043d\u0435\u043a\u043e\u0442\u043e\u0440\u043e\u043c\u0443 \u0430\u0440\u0433\u0443\u043c\u0435\u043d\u0442\u0443), \u043d\u043e\u043c\u0435\u0440 \u0430\u0440\u0433\u0443\u043c\u0435\u043d\u0442\u0430, \u043d\u0430 \u0432\u044b\u0445\u043e\u0434 \u2014 \u0432\u0435\u043a\u0442\u043e\u0440 \u0444\u0443\u043d\u043a\u0446\u0438\u0438", None))
         self.input_text_3_3.setPlaceholderText(QCoreApplication.translate("Widget", u"\u041d\u043e\u043c\u0435\u0440 \u0430\u0440\u0433\u0443\u043c\u0435\u043d\u0442\u0430", None))
         self.input_text_3_1.setPlaceholderText(QCoreApplication.translate("Widget", u"\u0412\u0435\u043a\u0442\u043e\u0440 \u0444\u0443\u043d\u043a\u0446\u0438\u0438(0)", None))
         self.input_text_3_2.setPlaceholderText(QCoreApplication.translate("Widget", u"\u0412\u0435\u043a\u0442\u043e\u0440 \u0444\u0443\u043d\u043a\u0446\u0438\u0438(1)", None))
