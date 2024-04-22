@@ -108,7 +108,7 @@ class Application(QTabWidget, Ui_Widget):
             radio_buttons.setAutoExclusive(False)
             radio_buttons.setChecked(False)
             radio_buttons.setAutoExclusive(True)
-        self.label_5_func.setText(functions.get_func(3))
+        self.label_5_func.setText(functions.spaces(functions.get_func(3)))
         self.answer_5.clear()
 
     def exercise_5_check(self):
