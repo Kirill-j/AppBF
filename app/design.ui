@@ -492,14 +492,14 @@ QTabBar {
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_12">
          <item>
-          <widget class="QRadioButton" name="radio_button_5_y_fict_2">
+          <widget class="QRadioButton" name="radio_button_5_y_fict">
            <property name="text">
             <string>Фиктивная</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QRadioButton" name="radio_button_5_y_su_2">
+          <widget class="QRadioButton" name="radio_button_5_y_su">
            <property name="text">
             <string>Сущетвенная</string>
            </property>
@@ -515,14 +515,14 @@ QTabBar {
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_13">
          <item>
-          <widget class="QRadioButton" name="radio_button_5_y_fict_3">
+          <widget class="QRadioButton" name="radio_button_5_z_fict">
            <property name="text">
             <string>Фиктивная</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QRadioButton" name="radio_button_5_y_su_3">
+          <widget class="QRadioButton" name="radio_button_5_z_su">
            <property name="text">
             <string>Сущетвенная</string>
            </property>

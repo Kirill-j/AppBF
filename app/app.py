@@ -15,16 +15,27 @@ class Application(QTabWidget, Ui_Widget):
         self.answer = "Answer: "
         self.right_button = None
 
+        # переменные для 5 задачи
+        # self.x = -1, self.y = -1, self.z = -1
+
     def buttons_connections(self):
         self.button_enter_1.clicked.connect(self.exercise_1)
         self.button_enter_2.clicked.connect(self.exercise_2)
         self.button_enter_3.clicked.connect(self.exercise_3)
         self.button_start_4.clicked.connect(self.exercise_4)
-        self.button_enter_5.clicked.connect(self.exercise_5)
+        self.button_start_5.clicked.connect(self.exercise_5)
+        self.button_enter_5.clicked.connect(self.exercise_5_check)
         self.button_start_6.clicked.connect(self.exercise_6)
         self.button_start_7.clicked.connect(self.exercise_7)
         self.button_enter_8.clicked.connect(self.exercise_8)
         self.button_enter_9.clicked.connect(self.exercise_9)
+
+        # self.radio_button_5_x_su.clicked.connect()
+        # self.radio_button_5_x_fict.clicked.connect()
+        # self.radio_button_5_y_su.clicked.connect()
+        # self.radio_button_5_y_fict.clicked.connect()
+        # self.radio_button_5_z_su.clicked.connect()
+        # self.radio_button_5_z_fict.che
 
     def exercise_1(self):
         n = self.input_text_1.text()
@@ -96,7 +107,35 @@ class Application(QTabWidget, Ui_Widget):
             self.answer_4.setText("Wrong!")
 
     def exercise_5(self):
-        self.label_5.setText("ТЫ ЛОХ!!!")
+        self.label_5_func.setText(functions.func_of_3_arg())
+
+    def exercise_5_check(self):
+        if not ((self.radio_button_5_x_su.isChecked() or self.radio_button_5_x_fict.isChecked()) and (
+                self.radio_button_5_y_su.isChecked() or self.radio_button_5_y_fict.isChecked()) and (
+                        self.radio_button_5_z_su.isChecked() or self.radio_button_5_z_fict.isChecked())):
+            self.answer_5.setText("Выберите все переменные")
+        else:
+            self.answer_5.setText("Норм")
+        if self.radio_button_5_x_su.isChecked():
+            print("x su")
+        elif self.radio_button_5_x_fict.isChecked():
+            print("x fict")
+        else:
+            print("x not checked")
+
+        if self.radio_button_5_y_su.isChecked():
+            print("y su")
+        elif self.radio_button_5_y_fict.isChecked():
+            print("y fict")
+        else:
+            print("y not checked")
+
+        if self.radio_button_5_z_su.isChecked():
+            print("z su")
+        elif self.radio_button_5_z_fict.isChecked():
+            print("z fict")
+        else:
+            print("z not checked")
 
     def exercise_6(self):
         bin_func = str(functions.func_of_3_arg())

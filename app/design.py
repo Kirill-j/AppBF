@@ -377,15 +377,15 @@ class Ui_Widget(object):
         self.group_box_y.setObjectName(u"group_box_y")
         self.verticalLayout_12 = QVBoxLayout(self.group_box_y)
         self.verticalLayout_12.setObjectName(u"verticalLayout_12")
-        self.radio_button_5_y_fict_2 = QRadioButton(self.group_box_y)
-        self.radio_button_5_y_fict_2.setObjectName(u"radio_button_5_y_fict_2")
+        self.radio_button_5_y_fict = QRadioButton(self.group_box_y)
+        self.radio_button_5_y_fict.setObjectName(u"radio_button_5_y_fict")
 
-        self.verticalLayout_12.addWidget(self.radio_button_5_y_fict_2)
+        self.verticalLayout_12.addWidget(self.radio_button_5_y_fict)
 
-        self.radio_button_5_y_su_2 = QRadioButton(self.group_box_y)
-        self.radio_button_5_y_su_2.setObjectName(u"radio_button_5_y_su_2")
+        self.radio_button_5_y_su = QRadioButton(self.group_box_y)
+        self.radio_button_5_y_su.setObjectName(u"radio_button_5_y_su")
 
-        self.verticalLayout_12.addWidget(self.radio_button_5_y_su_2)
+        self.verticalLayout_12.addWidget(self.radio_button_5_y_su)
 
 
         self.horizontalLayout_8.addWidget(self.group_box_y)
@@ -394,15 +394,15 @@ class Ui_Widget(object):
         self.group_box_z.setObjectName(u"group_box_z")
         self.verticalLayout_13 = QVBoxLayout(self.group_box_z)
         self.verticalLayout_13.setObjectName(u"verticalLayout_13")
-        self.radio_button_5_y_fict_3 = QRadioButton(self.group_box_z)
-        self.radio_button_5_y_fict_3.setObjectName(u"radio_button_5_y_fict_3")
+        self.radio_button_5_z_fict = QRadioButton(self.group_box_z)
+        self.radio_button_5_z_fict.setObjectName(u"radio_button_5_z_fict")
 
-        self.verticalLayout_13.addWidget(self.radio_button_5_y_fict_3)
+        self.verticalLayout_13.addWidget(self.radio_button_5_z_fict)
 
-        self.radio_button_5_y_su_3 = QRadioButton(self.group_box_z)
-        self.radio_button_5_y_su_3.setObjectName(u"radio_button_5_y_su_3")
+        self.radio_button_5_z_su = QRadioButton(self.group_box_z)
+        self.radio_button_5_z_su.setObjectName(u"radio_button_5_z_su")
 
-        self.verticalLayout_13.addWidget(self.radio_button_5_y_su_3)
+        self.verticalLayout_13.addWidget(self.radio_button_5_z_su)
 
 
         self.horizontalLayout_8.addWidget(self.group_box_z)
@@ -622,11 +622,11 @@ class Ui_Widget(object):
         self.radio_button_5_x_fict.setText(QCoreApplication.translate("Widget", u"\u0424\u0438\u043a\u0442\u0438\u0432\u043d\u0430\u044f", None))
         self.radio_button_5_x_su.setText(QCoreApplication.translate("Widget", u"\u0421\u0443\u0449\u0435\u0442\u0432\u0435\u043d\u043d\u0430\u044f", None))
         self.group_box_y.setTitle(QCoreApplication.translate("Widget", u"Y", None))
-        self.radio_button_5_y_fict_2.setText(QCoreApplication.translate("Widget", u"\u0424\u0438\u043a\u0442\u0438\u0432\u043d\u0430\u044f", None))
-        self.radio_button_5_y_su_2.setText(QCoreApplication.translate("Widget", u"\u0421\u0443\u0449\u0435\u0442\u0432\u0435\u043d\u043d\u0430\u044f", None))
+        self.radio_button_5_y_fict.setText(QCoreApplication.translate("Widget", u"\u0424\u0438\u043a\u0442\u0438\u0432\u043d\u0430\u044f", None))
+        self.radio_button_5_y_su.setText(QCoreApplication.translate("Widget", u"\u0421\u0443\u0449\u0435\u0442\u0432\u0435\u043d\u043d\u0430\u044f", None))
         self.group_box_z.setTitle(QCoreApplication.translate("Widget", u"Z", None))
-        self.radio_button_5_y_fict_3.setText(QCoreApplication.translate("Widget", u"\u0424\u0438\u043a\u0442\u0438\u0432\u043d\u0430\u044f", None))
-        self.radio_button_5_y_su_3.setText(QCoreApplication.translate("Widget", u"\u0421\u0443\u0449\u0435\u0442\u0432\u0435\u043d\u043d\u0430\u044f", None))
+        self.radio_button_5_z_fict.setText(QCoreApplication.translate("Widget", u"\u0424\u0438\u043a\u0442\u0438\u0432\u043d\u0430\u044f", None))
+        self.radio_button_5_z_su.setText(QCoreApplication.translate("Widget", u"\u0421\u0443\u0449\u0435\u0442\u0432\u0435\u043d\u043d\u0430\u044f", None))
         Widget.setTabText(Widget.indexOf(self.tab_5), QCoreApplication.translate("Widget", u"5", None))
         self.task_6.setText(QCoreApplication.translate("Widget", u"\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0414\u041d\u0424 \u0444\u0443\u043d\u043a\u0446\u0438\u0438", None))
         self.label_function_6.setText(QCoreApplication.translate("Widget", u"\u0424\u0443\u043d\u043a\u0446\u0438\u044f", None))
