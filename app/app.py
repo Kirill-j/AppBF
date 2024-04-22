@@ -116,34 +116,14 @@ class Application(QTabWidget, Ui_Widget):
             radio_buttons.setChecked(False)
             radio_buttons.setAutoExclusive(True)
         self.label_5_func.setText(functions.func_of_3_arg())
+        self.answer_5.clear()
 
     def exercise_5_check(self):
-        if not ((self.radio_button_5_x_su.isChecked() or self.radio_button_5_x_fict.isChecked()) and (
-                self.radio_button_5_y_su.isChecked() or self.radio_button_5_y_fict.isChecked()) and (
-                        self.radio_button_5_z_su.isChecked() or self.radio_button_5_z_fict.isChecked())):
-            self.answer_5.setText("Выберите все переменные")
-        else:
-            self.answer_5.setText("Норм")
-        if self.radio_button_5_x_su.isChecked():
-            print("x su")
-        elif self.radio_button_5_x_fict.isChecked():
-            print("x fict")
-        else:
-            print("x not checked")
-
-        if self.radio_button_5_y_su.isChecked():
-            print("y su")
-        elif self.radio_button_5_y_fict.isChecked():
-            print("y fict")
-        else:
-            print("y not checked")
-
-        if self.radio_button_5_z_su.isChecked():
-            print("z su")
-        elif self.radio_button_5_z_fict.isChecked():
-            print("z fict")
-        else:
-            print("z not checked")
+        if self.label_5_func.text() == 'Вектор':
+            return self.answer_5.setText("Вы не нажали старт")
+        if self.button_group_x.checkedButton() is None or self.button_group_y.checkedButton() is None or self.button_group_z.checkedButton() is None:
+            return self.answer_5.setText("Выберите каждую переменную")
+        func = self.label_5_func.text()
 
     def exercise_6(self):
         bin_func = str(functions.func_of_3_arg())
