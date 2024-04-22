@@ -1,35 +1,33 @@
-import random
+import numpy as np  
 
-# def create_truth_table(x):
-#     truth_table = {}
-#     for i in range(int(len(x) ** 0.5) + 1):
-#         for j in range(len(x)):
-#             truth_table[j] = i
-#     print(truth_table)
-#
-#
-# n = "11000011"
-# create_truth_table(n)
+def residual_function(vector, sig, arg):
+    l_vector = list(str(vector))
+    new_vector = np.array_split(l_vector, 2 ** arg)
+    res_func = []
+    if sig == 0:
+        for i in range(2 ** arg):
+            if i % 2 == 0:
+                res_func.extend(new_vector[i])
+    else:
+        for i in range(2 ** arg):
+            if i % 2 != 0:
+                res_func.extend(new_vector[i])
+    return ''.join(res_func)
 
+def game_5(vector):
+    zero_res_func = residual_function(vector, 0, 3)
+    single_res_func = residual_function(vector, 1, 3)
+    lst = [[zero_res_func], [single_res_func]]
+    print(zero_res_func)
+    print(single_res_func)
+    fict = []
+    sush = []
+    for i in range(len(zero_res_func)):
+        if zero_res_func[i] == single_res_func[i]:
+            fict.append(i + 1)
+        else:
+            sush.append(i + 1)
+    print(fict)
+    print(sush)
 
-# def create_truth_table(x):
-#     arg = []
-#     if len(x) == 8:
-#         num_vars = int(len(x) ** 0.5) + 1
-#     else:
-#         num_vars = int(len(x) ** 0.5)
-#     for i in range(num_vars):
-#         arg.append("x" + str(i + 1))
-#     print(*arg)
-
-
-
-# n = "1100110011001100"
-# create_truth_table(n)
-
-def get_func(n):
-    k = 2 ** (2 ** n) - 1
-    randon_int = random.randint(0, k)
-    return bin(randon_int)[2:].zfill(2 ** n)
-
-print(get_func(4))
+game_5("11101011")
