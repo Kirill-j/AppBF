@@ -60,7 +60,7 @@ QTabBar {
    <enum>QTabWidget::TabShape::Triangular</enum>
   </property>
   <property name="currentIndex">
-   <number>10</number>
+   <number>0</number>
   </property>
   <widget class="QWidget" name="tab_1">
    <attribute name="title">
@@ -176,7 +176,7 @@ QTabBar {
     <item>
      <widget class="QLabel" name="task_3">
       <property name="text">
-       <string>На вход — вектор функции, 0 или 1, номер аргумента, на выход — соответствующая остаточная</string>
+       <string>На вход — два вектора (это нулевая и единичная остаточные функции по некоторому аргументу), номер аргумента, на выход — вектор функции</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
