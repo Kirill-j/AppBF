@@ -478,7 +478,7 @@ QTabBar {
          <item>
           <widget class="QRadioButton" name="radio_button_5_x_su">
            <property name="text">
-            <string>Сущетвенная</string>
+            <string>Сущеcтвенная</string>
            </property>
           </widget>
          </item>
@@ -501,7 +501,7 @@ QTabBar {
          <item>
           <widget class="QRadioButton" name="radio_button_5_y_su">
            <property name="text">
-            <string>Сущетвенная</string>
+            <string>Сущеcтвенная</string>
            </property>
           </widget>
          </item>
@@ -524,7 +524,7 @@ QTabBar {
          <item>
           <widget class="QRadioButton" name="radio_button_5_z_su">
            <property name="text">
-            <string>Сущетвенная</string>
+            <string>Сущеcтвенная</string>
            </property>
           </widget>
          </item>

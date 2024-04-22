@@ -30,13 +30,6 @@ class Application(QTabWidget, Ui_Widget):
         self.button_enter_8.clicked.connect(self.exercise_8)
         self.button_enter_9.clicked.connect(self.exercise_9)
 
-        # self.radio_button_5_x_su.clicked.connect()
-        # self.radio_button_5_x_fict.clicked.connect()
-        # self.radio_button_5_y_su.clicked.connect()
-        # self.radio_button_5_y_fict.clicked.connect()
-        # self.radio_button_5_z_su.clicked.connect()
-        # self.radio_button_5_z_fict.che
-
     def exercise_1(self):
         n = self.input_text_1.text()
         if n.isnumeric():
