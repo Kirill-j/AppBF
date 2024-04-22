@@ -15,9 +15,6 @@ class Application(QTabWidget, Ui_Widget):
         self.answer = "Answer: "
         self.right_button = None
 
-        # переменные для 5 задачи
-        # self.x = -1, self.y = -1, self.z = -1
-
     def buttons_connections(self):
         self.button_enter_1.clicked.connect(self.exercise_1)
         self.button_enter_2.clicked.connect(self.exercise_2)
