@@ -41,7 +41,7 @@ class Application(QTabWidget, Ui_Widget):
         n = self.input_text_1.text()
         if n.isnumeric():
             n = int(n)
-            n = functions.spaces(functions.get_func(n), n-2)
+            n = functions.spaces(functions.get_func(n), n - 2)
             self.answer_1.setText(self.answer + n)
         else:
             functions.error_value(self.answer_1)
@@ -55,7 +55,7 @@ class Application(QTabWidget, Ui_Widget):
             sigma = int(sigma)
             arg_number = int(arg_number)
             res_func = functions.residual_function(func_vector, sigma, arg_number)
-            res_func = functions.spaces(res_func,arg_number-1)
+            res_func = functions.spaces(res_func, arg_number - 1)
             self.answer_2.setText(self.answer + res_func)
         else:
             functions.error_value(self.answer_2)
@@ -124,8 +124,28 @@ class Application(QTabWidget, Ui_Widget):
         if not ((self.radio_button_5_x_su.isChecked() or self.radio_button_5_x_fict.isChecked()) and (
                 self.radio_button_5_y_su.isChecked() or self.radio_button_5_y_fict.isChecked()) and (
                         self.radio_button_5_z_su.isChecked() or self.radio_button_5_z_fict.isChecked())):
-            self.answer_5.setText("Выберите каждую переменную")
+            return self.answer_5.setText("Выберите каждую переменную")
+
         func = self.label_5_func.text()
+        f_x_0 = functions.residual_function(func, 0, 1)
+        f_x_1 = functions.residual_function(func, 1, 1)
+        f_y_0 = functions.residual_function(func, 0, 2)
+        f_y_1 = functions.residual_function(func, 1, 2)
+        f_z_0 = functions.residual_function(func, 0, 3)
+        f_z_1 = functions.residual_function(func, 1, 3)
+        x = 1
+        y = 1
+        z = 1
+        if f_x_0 == f_x_1: x = 0
+        if f_y_0 == f_y_1: y = 0
+        if f_z_0 == f_z_1: z = 0
+
+        if (self.radio_button_5_x_fict.isChecked() and x == 0 or self.radio_button_5_x_su.isChecked() and x == 1) and (
+                self.radio_button_5_y_fict.isChecked() and y == 0 or self.radio_button_5_y_su.isChecked() and y == 1) and (
+                self.radio_button_5_z_fict.isChecked() and z == 0 or self.radio_button_5_z_su.isChecked() and z == 1):
+            return self.answer_5.setText("Right !")
+        else:
+            return self.answer_5.setText("Wrong")
 
     def exercise_6(self):
         bin_func = str(functions.get_func(3))
