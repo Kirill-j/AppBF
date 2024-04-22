@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1000</width>
-    <height>600</height>
+    <height>500</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -52,15 +52,15 @@ QTabBar {
 	qproperty-sizePolicy: [Expanding, Expanding, 0, 0];
 }
 
-#answer_4 {
+#answer_4, #label_function_4 {
 	font-size: 30pt
 }</string>
   </property>
   <property name="tabShape">
-   <enum>QTabWidget::Triangular</enum>
+   <enum>QTabWidget::TabShape::Triangular</enum>
   </property>
   <property name="currentIndex">
-   <number>4</number>
+   <number>10</number>
   </property>
   <widget class="QWidget" name="tab_1">
    <attribute name="title">
@@ -77,27 +77,21 @@ QTabBar {
       </property>
      </widget>
     </item>
-    <item>
+    <item alignment="Qt::AlignmentFlag::AlignLeft">
      <widget class="QLineEdit" name="input_text_1">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
+      <property name="maximumSize">
+       <size>
+        <width>50</width>
+        <height>16777215</height>
+       </size>
       </property>
       <property name="placeholderText">
        <string>n</string>
       </property>
      </widget>
     </item>
-    <item>
+    <item alignment="Qt::AlignmentFlag::AlignLeft">
      <widget class="QPushButton" name="button_enter_1">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
       <property name="text">
        <string>Enter</string>
       </property>
@@ -131,69 +125,32 @@ QTabBar {
      </widget>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item alignment="Qt::AlignmentFlag::AlignLeft">
        <widget class="QLineEdit" name="input_text_2_1">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
         <property name="placeholderText">
          <string>Вектор функции</string>
         </property>
        </widget>
       </item>
-      <item>
-       <widget class="QLineEdit" name="input_text_2_2">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="placeholderText">
-         <string>0 или 1</string>
-        </property>
-       </widget>
-      </item>
-      <item>
+      <item alignment="Qt::AlignmentFlag::AlignLeft">
        <widget class="QLineEdit" name="input_text_2_3">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
         <property name="placeholderText">
          <string>Номер аргумента</string>
         </property>
        </widget>
       </item>
-      <item>
-       <spacer name="verticalSpacer">
-        <property name="sizeType">
-         <enum>QSizePolicy::Fixed</enum>
+      <item alignment="Qt::AlignmentFlag::AlignLeft">
+       <widget class="QLineEdit" name="input_text_2_2">
+        <property name="placeholderText">
+         <string>0 или 1</string>
         </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>200</width>
-          <height>50</height>
-         </size>
-        </property>
-       </spacer>
+       </widget>
       </item>
      </layout>
     </item>
-    <item>
+    <item alignment="Qt::AlignmentFlag::AlignLeft">
      <widget class="QPushButton" name="button_enter_2">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
       <property name="text">
        <string>Enter</string>
       </property>
@@ -203,6 +160,9 @@ QTabBar {
      <widget class="QLabel" name="answer_2">
       <property name="text">
        <string>Answer: </string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
@@ -224,69 +184,32 @@ QTabBar {
      </widget>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QLineEdit" name="input_text_3_1">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="placeholderText">
-         <string>Вектор функции(0)</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="input_text_3_2">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="placeholderText">
-         <string>Вектор функции(1)</string>
-        </property>
-       </widget>
-      </item>
-      <item>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item alignment="Qt::AlignmentFlag::AlignLeft">
        <widget class="QLineEdit" name="input_text_3_3">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
         <property name="placeholderText">
          <string>Номер аргумента</string>
         </property>
        </widget>
       </item>
-      <item>
-       <spacer name="verticalSpacer_2">
-        <property name="sizeType">
-         <enum>QSizePolicy::Fixed</enum>
+      <item alignment="Qt::AlignmentFlag::AlignLeft">
+       <widget class="QLineEdit" name="input_text_3_1">
+        <property name="placeholderText">
+         <string>Вектор функции(0)</string>
         </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>150</width>
-          <height>50</height>
-         </size>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignmentFlag::AlignLeft">
+       <widget class="QLineEdit" name="input_text_3_2">
+        <property name="placeholderText">
+         <string>Вектор функции(1)</string>
         </property>
-       </spacer>
+       </widget>
       </item>
      </layout>
     </item>
-    <item>
+    <item alignment="Qt::AlignmentFlag::AlignLeft">
      <widget class="QPushButton" name="button_enter_3">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
       <property name="text">
        <string>Enter</string>
       </property>
@@ -297,6 +220,9 @@ QTabBar {
       <property name="text">
        <string>Answer: </string>
       </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
      </widget>
     </item>
    </layout>
@@ -305,7 +231,7 @@ QTabBar {
    <attribute name="title">
     <string>4</string>
    </attribute>
-   <layout class="QVBoxLayout" name="verticalLayout_4">
+   <layout class="QVBoxLayout" name="verticalLayout_6">
     <item>
      <widget class="QLabel" name="task_4">
       <property name="text">
@@ -317,32 +243,32 @@ QTabBar {
      </widget>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <property name="bottomMargin">
+       <number>50</number>
+      </property>
       <item>
-       <spacer name="verticalSpacer_3">
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
+       <widget class="QLabel" name="label_function_4">
+        <property name="text">
+         <string/>
         </property>
-       </spacer>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QLabel" name="answer_4">
         <property name="text">
          <string/>
         </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="button_start_4">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
         <property name="text">
          <string>Start</string>
         </property>
@@ -351,14 +277,7 @@ QTabBar {
      </layout>
     </item>
     <item>
-     <widget class="QLabel" name="label_function_4">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_6">
+     <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QPushButton" name="btn_ans_4_1">
         <property name="text">
@@ -390,7 +309,7 @@ QTabBar {
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_7">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
        <widget class="QPushButton" name="btn_ans_4_5">
         <property name="text">
@@ -422,7 +341,7 @@ QTabBar {
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_8">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
        <widget class="QPushButton" name="btn_ans_4_9">
         <property name="text">
@@ -454,7 +373,7 @@ QTabBar {
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_9">
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
       <item>
        <widget class="QPushButton" name="btn_ans_4_13">
         <property name="text">
@@ -491,7 +410,7 @@ QTabBar {
    <attribute name="title">
     <string>5</string>
    </attribute>
-   <layout class="QVBoxLayout" name="verticalLayout_5">
+   <layout class="QVBoxLayout" name="verticalLayout_11">
     <item>
      <widget class="QPushButton" name="button_enter_5">
       <property name="text">
@@ -512,7 +431,7 @@ QTabBar {
    <attribute name="title">
     <string>6</string>
    </attribute>
-   <layout class="QVBoxLayout" name="verticalLayout_6">
+   <layout class="QVBoxLayout" name="verticalLayout_7">
     <item>
      <widget class="QLabel" name="task_6">
       <property name="text">
@@ -524,22 +443,19 @@ QTabBar {
      </widget>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_10">
-      <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item alignment="Qt::AlignmentFlag::AlignHCenter">
        <widget class="QLabel" name="label_function_6">
         <property name="text">
-         <string/>
+         <string>Функция</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
-      <item>
+      <item alignment="Qt::AlignmentFlag::AlignHCenter">
        <widget class="QPushButton" name="button_start_6">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
         <property name="text">
          <string>Start</string>
         </property>
@@ -547,27 +463,21 @@ QTabBar {
       </item>
      </layout>
     </item>
-    <item>
+    <item alignment="Qt::AlignmentFlag::AlignLeft">
      <widget class="QLineEdit" name="input_text_6">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
+      <property name="minimumSize">
+       <size>
+        <width>400</width>
+        <height>0</height>
+       </size>
       </property>
       <property name="placeholderText">
        <string>ДНФ функции</string>
       </property>
      </widget>
     </item>
-    <item>
+    <item alignment="Qt::AlignmentFlag::AlignLeft">
      <widget class="QPushButton" name="button_enter_6">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
       <property name="text">
        <string>Enter</string>
       </property>
@@ -576,7 +486,10 @@ QTabBar {
     <item>
      <widget class="QLabel" name="answer_6">
       <property name="text">
-       <string/>
+       <string>Answer: </string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
@@ -598,22 +511,19 @@ QTabBar {
      </widget>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_11">
-      <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <item alignment="Qt::AlignmentFlag::AlignHCenter">
        <widget class="QLabel" name="label_function_7">
         <property name="text">
-         <string/>
+         <string>Функция</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
-      <item>
+      <item alignment="Qt::AlignmentFlag::AlignHCenter">
        <widget class="QPushButton" name="button_start_7">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
         <property name="text">
          <string>Start</string>
         </property>
@@ -621,27 +531,21 @@ QTabBar {
       </item>
      </layout>
     </item>
-    <item>
+    <item alignment="Qt::AlignmentFlag::AlignLeft">
      <widget class="QLineEdit" name="input_text_7">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
+      <property name="minimumSize">
+       <size>
+        <width>400</width>
+        <height>0</height>
+       </size>
       </property>
       <property name="placeholderText">
        <string>КНФ функции</string>
       </property>
      </widget>
     </item>
-    <item>
+    <item alignment="Qt::AlignmentFlag::AlignLeft">
      <widget class="QPushButton" name="button_enter_7">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
       <property name="text">
        <string>Enter</string>
       </property>
@@ -650,7 +554,10 @@ QTabBar {
     <item>
      <widget class="QLabel" name="answer_7">
       <property name="text">
-       <string/>
+       <string>Answer: </string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
@@ -671,30 +578,15 @@ QTabBar {
       </property>
      </widget>
     </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_12"/>
-    </item>
-    <item>
+    <item alignment="Qt::AlignmentFlag::AlignLeft">
      <widget class="QLineEdit" name="input_text_8">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
       <property name="placeholderText">
        <string>Вектор функции</string>
       </property>
      </widget>
     </item>
-    <item>
+    <item alignment="Qt::AlignmentFlag::AlignLeft">
      <widget class="QPushButton" name="button_enter_8">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
       <property name="text">
        <string>Enter</string>
       </property>
@@ -704,6 +596,9 @@ QTabBar {
      <widget class="QLabel" name="answer_8">
       <property name="text">
        <string>PDNF: </string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
@@ -724,30 +619,15 @@ QTabBar {
       </property>
      </widget>
     </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_13"/>
-    </item>
-    <item>
+    <item alignment="Qt::AlignmentFlag::AlignLeft">
      <widget class="QLineEdit" name="input_text_9">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
       <property name="placeholderText">
        <string>Вектор функции</string>
       </property>
      </widget>
     </item>
-    <item>
+    <item alignment="Qt::AlignmentFlag::AlignLeft">
      <widget class="QPushButton" name="button_enter_9">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
       <property name="text">
        <string>Enter</string>
       </property>
@@ -757,6 +637,9 @@ QTabBar {
      <widget class="QLabel" name="answer_9">
       <property name="text">
        <string>PCNF: </string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
