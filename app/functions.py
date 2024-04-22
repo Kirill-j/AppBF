@@ -179,3 +179,14 @@ def pcnf(bin_func):
             pcnf_expr += "\n"
 
     return pcnf_expr[:-3]
+
+
+# Возвращает 1, если переменная существенная и 0 если фиктивная
+def check_fict_of_significant(func, arg_num):
+    x_0 = residual_function(func, 0, arg_num)
+    x_1 = residual_function(func, 1, arg_num)
+    print("-----------------------")
+    print(x_0)
+    print(x_1)
+    print("-----------------------")
+    return 0 if x_0 == x_1 else 1
