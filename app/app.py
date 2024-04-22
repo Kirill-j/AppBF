@@ -121,8 +121,10 @@ class Application(QTabWidget, Ui_Widget):
     def exercise_5_check(self):
         if self.label_5_func.text() == 'Вектор':
             return self.answer_5.setText("Вы не нажали старт")
-        if self.button_group_x.checkedButton() is None or self.button_group_y.checkedButton() is None or self.button_group_z.checkedButton() is None:
-            return self.answer_5.setText("Выберите каждую переменную")
+        if not ((self.radio_button_5_x_su.isChecked() or self.radio_button_5_x_fict.isChecked()) and (
+                self.radio_button_5_y_su.isChecked() or self.radio_button_5_y_fict.isChecked()) and (
+                        self.radio_button_5_z_su.isChecked() or self.radio_button_5_z_fict.isChecked())):
+            self.answer_5.setText("Выберите каждую переменную")
         func = self.label_5_func.text()
 
     def exercise_6(self):
