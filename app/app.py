@@ -107,15 +107,29 @@ class Application(QTabWidget, Ui_Widget):
             self.answer_4.setText("Wrong!")
 
     def exercise_5(self):
-        # buttons = [self.radio_button_5_x_su, self.radio_button_5_x_fict, self.radio_button_5_y_su,
-        #            self.radio_button_5_y_fict, self.radio_button_5_z_su, self.radio_button_5_z_fict]
-        # for button in buttons: button.setDisabled(True)
+        buttons = [self.radio_button_5_x_su, self.radio_button_5_x_fict, self.radio_button_5_y_su,
+                   self.radio_button_5_y_fict, self.radio_button_5_z_su, self.radio_button_5_z_fict]
+
+        button_groups = [self.button_group_x, self.button_group_y, self.button_group_z]
+
+        # Делает все радио-кнопки не нажатыми
+        for group in button_groups:
+            group.setExclusive(False)
+        for button in buttons:
+            button.setChecked(False)
+        for group in button_groups:
+            group.setExclusive(True)
+
         self.label_5_func.setText(functions.func_of_3_arg())
+        self.answer_5.clear()
 
     def exercise_5_check(self):
+        if self.label_5_func.text() == 'Вектор':
+            return self.answer_5.setText("Вы не нажали старт")
         if self.button_group_x.checkedButton() is None or self.button_group_y.checkedButton() is None or self.button_group_z.checkedButton() is None:
-            self.answer_5.setText("Выберите каждую переменную")
-        else: self.answer_5.setText("Красава")
+            return self.answer_5.setText("Выберите каждую переменную")
+        func = self.label_5_func.text()
+
     def exercise_6(self):
         bin_func = str(functions.func_of_3_arg())
         self.label_function_6.setText(bin_func)
