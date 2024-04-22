@@ -1,6 +1,7 @@
 app/.idea/app.iml
 app/.idea/modules.xml
 app/.idea/misc.xml
+app/.idea/workspace.xml
 app/.idea/inspectionProfiles/profiles_settings.xml
 
 # Byte-compiled / optimized / DLL files
@@ -241,4 +242,3 @@ fabric.properties
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
-app/.idea/workspace.xml
