@@ -14,10 +14,15 @@ def error_value(label_for_input):
     label_for_input.setText("Invalid value!\nPlease re-enter the value.")
 
 
-# Добавляет пробел после каждых n символов строки
-def spaces(stroka, n):
-    for i in range(0, len(stroka) + (len(stroka) // n), n + 1):
-        stroka = (stroka[:i] + ' ' + stroka[i:])
+# spaces(string, n) ставит пробелы по n-му аргументу
+def spaces(stroka, n=1):
+    if n < 0: n = 0
+    step = len(stroka) // 2 ** n
+    position = step
+    steps = 2 ** n - 1
+    for i in range(0, steps):
+        stroka = (stroka[:position] + ' ' + stroka[position:])
+        position += step + 1
     return stroka
 
 

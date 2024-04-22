@@ -41,7 +41,7 @@ class Application(QTabWidget, Ui_Widget):
         n = self.input_text_1.text()
         if n.isnumeric():
             n = int(n)
-            n = functions.spaces(functions.get_func(n), 4)
+            n = functions.spaces(functions.get_func(n), n-2)
             self.answer_1.setText(self.answer + n)
         else:
             functions.error_value(self.answer_1)
@@ -55,7 +55,7 @@ class Application(QTabWidget, Ui_Widget):
             sigma = int(sigma)
             arg_number = int(arg_number)
             res_func = functions.residual_function(func_vector, sigma, arg_number)
-            res_func = functions.spaces(res_func, (len(str(func_vector)) // 2 ** arg_number))
+            res_func = functions.spaces(res_func,arg_number-1)
             self.answer_2.setText(self.answer + res_func)
         else:
             functions.error_value(self.answer_2)
@@ -67,7 +67,7 @@ class Application(QTabWidget, Ui_Widget):
         if functions.is_valid(residual_vector_null) & functions.is_valid(residual_vector_unit) & arg_number.isnumeric():
             arg_number = int(arg_number)
             orig_func = functions.original_function(residual_vector_null, residual_vector_unit, arg_number)
-            orig_func = functions.spaces(orig_func, (len(str(orig_func)) // 2 ** arg_number))
+            orig_func = functions.spaces(orig_func, arg_number)
             self.answer_3.setText(self.answer + orig_func)
         else:
             functions.error_value(self.answer_3)
