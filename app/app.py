@@ -107,40 +107,15 @@ class Application(QTabWidget, Ui_Widget):
             self.answer_4.setText("Wrong!")
 
     def exercise_5(self):
-        buttons = [self.radio_button_5_x_su, self.radio_button_5_x_fict, self.radio_button_5_y_su,
-                   self.radio_button_5_y_fict, self.radio_button_5_z_su, self.radio_button_5_z_fict]
-        for button in buttons: button.setDisabled(True)
+        # buttons = [self.radio_button_5_x_su, self.radio_button_5_x_fict, self.radio_button_5_y_su,
+        #            self.radio_button_5_y_fict, self.radio_button_5_z_su, self.radio_button_5_z_fict]
+        # for button in buttons: button.setDisabled(True)
         self.label_5_func.setText(functions.func_of_3_arg())
 
     def exercise_5_check(self):
-        if not ((self.radio_button_5_x_su.isChecked() or self.radio_button_5_x_fict.isChecked()) and (
-                self.radio_button_5_y_su.isChecked() or self.radio_button_5_y_fict.isChecked()) and (
-                        self.radio_button_5_z_su.isChecked() or self.radio_button_5_z_fict.isChecked())):
-            self.answer_5.setText("Выберите все переменные")
-        # self.button_g
-        else:
-            self.answer_5.setText("Норм")
-        if self.radio_button_5_x_su.isChecked():
-            print("x su")
-        elif self.radio_button_5_x_fict.isChecked():
-            print("x fict")
-        else:
-            print("x not checked")
-
-        if self.radio_button_5_y_su.isChecked():
-            print("y su")
-        elif self.radio_button_5_y_fict.isChecked():
-            print("y fict")
-        else:
-            print("y not checked")
-
-        if self.radio_button_5_z_su.isChecked():
-            print("z su")
-        elif self.radio_button_5_z_fict.isChecked():
-            print("z fict")
-        else:
-            print("z not checked")
-
+        if self.button_group_x.checkedButton() is None or self.button_group_y.checkedButton() is None or self.button_group_z.checkedButton() is None:
+            self.answer_5.setText("Выберите каждую переменную")
+        else: self.answer_5.setText("Красава")
     def exercise_6(self):
         bin_func = str(functions.func_of_3_arg())
         self.label_function_6.setText(bin_func)
