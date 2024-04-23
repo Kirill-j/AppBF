@@ -339,12 +339,16 @@ class Ui_Widget(object):
 
         self.horizontalLayout_9.addLayout(self.verticalLayout_14)
 
+        self.label_5 = QLabel(self.tab_5)
+        self.label_5.setObjectName(u"label_5")
+
+        self.horizontalLayout_9.addWidget(self.label_5, 0, Qt.AlignmentFlag.AlignRight)
+
         self.label_5_func = QLabel(self.tab_5)
         self.label_5_func.setObjectName(u"label_5_func")
 
-        self.horizontalLayout_9.addWidget(self.label_5_func, 0, Qt.AlignmentFlag.AlignHCenter)
+        self.horizontalLayout_9.addWidget(self.label_5_func, 0, Qt.AlignmentFlag.AlignLeft)
 
-        self.horizontalLayout_9.setStretch(1, 1)
 
         self.verticalLayout_15.addLayout(self.horizontalLayout_9)
 
@@ -616,6 +620,7 @@ class Ui_Widget(object):
         self.task_5.setText(QCoreApplication.translate("Widget", u"\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0435 \u0438 \u0444\u0438\u043a\u0442\u0438\u0432\u043d\u044b\u0435 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0435", None))
         self.button_start_5.setText(QCoreApplication.translate("Widget", u"Start", None))
         self.button_enter_5.setText(QCoreApplication.translate("Widget", u"Enter", None))
+        self.label_5.setText(QCoreApplication.translate("Widget", u"f(x,y,z) = ", None))
         self.label_5_func.setText(QCoreApplication.translate("Widget", u"\u0412\u0435\u043a\u0442\u043e\u0440", None))
         self.answer_5.setText(QCoreApplication.translate("Widget", u"answer", None))
         self.group_box_x.setTitle(QCoreApplication.translate("Widget", u"X", None))
