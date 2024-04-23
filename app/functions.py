@@ -11,7 +11,7 @@ def get_func(n):
 
 # Выводит сообщение об ошибке ввода
 def error_value(label_for_input):
-    label_for_input.setText("Invalid value!\nPlease re-enter the value.")
+    label_for_input.setText("Неверное значение!\nПожалуйста, введите значение заново.")
 
 
 # spaces(string, n) ставит пробелы по n-му аргументу
