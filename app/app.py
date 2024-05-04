@@ -157,19 +157,15 @@ class Application(QTabWidget, Ui_Widget):
         return self.answer_6.setText(functions.is_cnf(formula, func))
 
     def exercise_8(self):
-        self.answer_8.clear()
         bin_func = self.input_text_8.text()
-        if bin_func.isnumeric() and bin_func != '0' and bin_func != '1' and (
-                len(bin_func) & (len(bin_func) - 1)) == 0:
+        if functions.is_valid(bin_func):
             self.answer_8.setText("PDNF: " + functions.pdnf(bin_func))
         else:
             functions.error_value(self.answer_8)
 
     def exercise_9(self):
-        self.answer_9.clear()
         bin_func = self.input_text_9.text()
-        if bin_func.isnumeric() and bin_func != '0' and bin_func != '1' and (
-                len(bin_func) & (len(bin_func) - 1)) == 0:
+        if functions.is_valid(bin_func):
             self.answer_9.setText("PCNF: " + functions.pcnf(bin_func))
         else:
             functions.error_value(self.answer_9)
