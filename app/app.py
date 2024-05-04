@@ -23,7 +23,9 @@ class Application(QTabWidget, Ui_Widget):
         self.button_start_5.clicked.connect(self.exercise_5)
         self.button_enter_5.clicked.connect(self.exercise_5_check)
         self.button_start_6.clicked.connect(self.exercise_6)
+        self.button_enter_6.clicked.connect(self.exercise_6_check)
         self.button_start_7.clicked.connect(self.exercise_7)
+        self.button_enter_7.clicked.connect(self.exercise_7_check)
         self.button_enter_8.clicked.connect(self.exercise_8)
         self.button_enter_9.clicked.connect(self.exercise_9)
 
@@ -129,46 +131,30 @@ class Application(QTabWidget, Ui_Widget):
             return self.answer_5.setText("Wrong")
 
     def exercise_6(self):
-        bin_func = str(functions.get_func(3))
-        self.label_function_6.setText(bin_func)
-        print(functions.dnf(bin_func))
+        func = functions.get_func(3)
+        self.label_6_function.setText(func)
+        return
 
-        def on_button_click(user_input):
-            user_input = str(user_input)
-            ans = functions.dnf(bin_func)
-            self.check_answer_6(user_input, ans, self.answer)
+    def exercise_6_check(self):
+        formula = self.input_text_6.text()
+        if formula == '':
+            return self.answer_6.setText('Введите формулу')
 
-        self.button_enter_6.clicked.connect(lambda: on_button_click(self.input_text_6.text()))
-
-    def check_answer_6(self, user_dnf, ans, answer):
-        self.answer_6.clear()
-        print(user_dnf)
-        print(ans)
-        if user_dnf == ans:
-            self.answer_6.setText(answer + "Right!")
-        else:
-            self.answer_6.setText(answer + "Wrong!")
+        func = self.label_6_function.text()
+        return self.answer_6.setText(functions.is_dnf(formula, func))
 
     def exercise_7(self):
-        bin_func = str(functions.get_func(3))
-        self.label_function_7.setText(bin_func)
-        print(functions.cnf(bin_func))
+        func = functions.get_func(3)
+        self.label_6_function.setText(func)
+        return
 
-        def on_button_click(user_input):
-            user_input = str(user_input)
-            ans = functions.cnf(bin_func)
-            self.check_answer_7(user_input, ans, self.answer)
+    def exercise_7_check(self):
+        formula = self.input_text_6.text()
+        if formula == '':
+            return self.answer_6.setText('Введите формулу')
 
-        self.button_enter_7.clicked.connect(lambda: on_button_click(self.input_text_7.text()))
-
-    def check_answer_7(self, user_cnf, ans, answer):
-        self.answer_7.clear()
-        print(user_cnf)
-        print(ans)
-        if user_cnf == ans:
-            self.answer_7.setText(answer + "Right!")
-        else:
-            self.answer_7.setText(answer + "Wrong!")
+        func = self.label_6_function.text()
+        return self.answer_6.setText(functions.is_cnf(formula, func))
 
     def exercise_8(self):
         self.answer_8.clear()

@@ -349,6 +349,9 @@ class Ui_Widget(object):
 
         self.horizontalLayout_9.addWidget(self.label_5_func, 0, Qt.AlignmentFlag.AlignLeft)
 
+        self.horizontalLayout_9.setStretch(0, 1)
+        self.horizontalLayout_9.setStretch(1, 1)
+        self.horizontalLayout_9.setStretch(2, 3)
 
         self.verticalLayout_15.addLayout(self.horizontalLayout_9)
 
@@ -427,11 +430,16 @@ class Ui_Widget(object):
 
         self.horizontalLayout_6 = QHBoxLayout()
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
-        self.label_function_6 = QLabel(self.tab_6)
-        self.label_function_6.setObjectName(u"label_function_6")
-        self.label_function_6.setWordWrap(True)
+        self.label_6 = QLabel(self.tab_6)
+        self.label_6.setObjectName(u"label_6")
 
-        self.horizontalLayout_6.addWidget(self.label_function_6, 0, Qt.AlignmentFlag.AlignHCenter)
+        self.horizontalLayout_6.addWidget(self.label_6, 0, Qt.AlignmentFlag.AlignRight)
+
+        self.label_6_function = QLabel(self.tab_6)
+        self.label_6_function.setObjectName(u"label_6_function")
+        self.label_6_function.setWordWrap(True)
+
+        self.horizontalLayout_6.addWidget(self.label_6_function, 0, Qt.AlignmentFlag.AlignLeft)
 
         self.button_start_6 = QPushButton(self.tab_6)
         self.button_start_6.setObjectName(u"button_start_6")
@@ -441,16 +449,21 @@ class Ui_Widget(object):
 
         self.verticalLayout_7.addLayout(self.horizontalLayout_6)
 
+        self.label = QLabel(self.tab_6)
+        self.label.setObjectName(u"label")
+
+        self.verticalLayout_7.addWidget(self.label)
+
         self.input_text_6 = QLineEdit(self.tab_6)
         self.input_text_6.setObjectName(u"input_text_6")
         self.input_text_6.setMinimumSize(QSize(400, 0))
 
-        self.verticalLayout_7.addWidget(self.input_text_6, 0, Qt.AlignmentFlag.AlignLeft)
+        self.verticalLayout_7.addWidget(self.input_text_6)
 
         self.button_enter_6 = QPushButton(self.tab_6)
         self.button_enter_6.setObjectName(u"button_enter_6")
 
-        self.verticalLayout_7.addWidget(self.button_enter_6, 0, Qt.AlignmentFlag.AlignLeft)
+        self.verticalLayout_7.addWidget(self.button_enter_6, 0, Qt.AlignmentFlag.AlignHCenter)
 
         self.answer_6 = QLabel(self.tab_6)
         self.answer_6.setObjectName(u"answer_6")
@@ -471,11 +484,16 @@ class Ui_Widget(object):
 
         self.horizontalLayout_7 = QHBoxLayout()
         self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
-        self.label_function_7 = QLabel(self.tab_7)
-        self.label_function_7.setObjectName(u"label_function_7")
-        self.label_function_7.setWordWrap(True)
+        self.label_7 = QLabel(self.tab_7)
+        self.label_7.setObjectName(u"label_7")
 
-        self.horizontalLayout_7.addWidget(self.label_function_7, 0, Qt.AlignmentFlag.AlignHCenter)
+        self.horizontalLayout_7.addWidget(self.label_7, 0, Qt.AlignmentFlag.AlignRight)
+
+        self.label_7_function = QLabel(self.tab_7)
+        self.label_7_function.setObjectName(u"label_7_function")
+        self.label_7_function.setWordWrap(True)
+
+        self.horizontalLayout_7.addWidget(self.label_7_function, 0, Qt.AlignmentFlag.AlignLeft)
 
         self.button_start_7 = QPushButton(self.tab_7)
         self.button_start_7.setObjectName(u"button_start_7")
@@ -485,16 +503,21 @@ class Ui_Widget(object):
 
         self.verticalLayout_8.addLayout(self.horizontalLayout_7)
 
+        self.label_2 = QLabel(self.tab_7)
+        self.label_2.setObjectName(u"label_2")
+
+        self.verticalLayout_8.addWidget(self.label_2)
+
         self.input_text_7 = QLineEdit(self.tab_7)
         self.input_text_7.setObjectName(u"input_text_7")
         self.input_text_7.setMinimumSize(QSize(400, 0))
 
-        self.verticalLayout_8.addWidget(self.input_text_7, 0, Qt.AlignmentFlag.AlignLeft)
+        self.verticalLayout_8.addWidget(self.input_text_7)
 
         self.button_enter_7 = QPushButton(self.tab_7)
         self.button_enter_7.setObjectName(u"button_enter_7")
 
-        self.verticalLayout_8.addWidget(self.button_enter_7, 0, Qt.AlignmentFlag.AlignLeft)
+        self.verticalLayout_8.addWidget(self.button_enter_7, 0, Qt.AlignmentFlag.AlignHCenter)
 
         self.answer_7 = QLabel(self.tab_7)
         self.answer_7.setObjectName(u"answer_7")
@@ -569,7 +592,7 @@ class Ui_Widget(object):
 
         self.retranslateUi(Widget)
 
-        Widget.setCurrentIndex(0)
+        Widget.setCurrentIndex(6)
 
 
         QMetaObject.connectSlotsByName(Widget)
@@ -634,18 +657,26 @@ class Ui_Widget(object):
         self.radio_button_5_z_su.setText(QCoreApplication.translate("Widget", u"\u0421\u0443\u0449\u0435c\u0442\u0432\u0435\u043d\u043d\u0430\u044f", None))
         Widget.setTabText(Widget.indexOf(self.tab_5), QCoreApplication.translate("Widget", u"5", None))
         self.task_6.setText(QCoreApplication.translate("Widget", u"\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0414\u041d\u0424 \u0444\u0443\u043d\u043a\u0446\u0438\u0438", None))
-        self.label_function_6.setText(QCoreApplication.translate("Widget", u"\u0424\u0443\u043d\u043a\u0446\u0438\u044f", None))
+        self.label_6.setText(QCoreApplication.translate("Widget", u"f(x,y,z) = ", None))
+        self.label_6_function.setText(QCoreApplication.translate("Widget", u"\u0424\u0443\u043d\u043a\u0446\u0438\u044f", None))
         self.button_start_6.setText(QCoreApplication.translate("Widget", u"Start", None))
+        self.label.setText(QCoreApplication.translate("Widget", u"! - \u041e\u0442\u0440\u0438\u0446\u0430\u043d\u0438\u0435\n"
+"* - \u041a\u043e\u043d\u044a\u044e\u043d\u043a\u0446\u0438\u044f\n"
+"+ - \u0414\u0438\u0437\u044a\u044e\u043d\u043a\u0446\u0438\u044f", None))
         self.input_text_6.setPlaceholderText(QCoreApplication.translate("Widget", u"\u0414\u041d\u0424 \u0444\u0443\u043d\u043a\u0446\u0438\u0438", None))
         self.button_enter_6.setText(QCoreApplication.translate("Widget", u"Enter", None))
-        self.answer_6.setText(QCoreApplication.translate("Widget", u"Answer: ", None))
+        self.answer_6.setText("")
         Widget.setTabText(Widget.indexOf(self.tab_6), QCoreApplication.translate("Widget", u"6", None))
         self.task_7.setText(QCoreApplication.translate("Widget", u"\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u041a\u041d\u0424 \u0444\u0443\u043d\u043a\u0446\u0438\u0438", None))
-        self.label_function_7.setText(QCoreApplication.translate("Widget", u"\u0424\u0443\u043d\u043a\u0446\u0438\u044f", None))
+        self.label_7.setText(QCoreApplication.translate("Widget", u"f(x,y,z) = ", None))
+        self.label_7_function.setText(QCoreApplication.translate("Widget", u"\u0424\u0443\u043d\u043a\u0446\u0438\u044f", None))
         self.button_start_7.setText(QCoreApplication.translate("Widget", u"Start", None))
+        self.label_2.setText(QCoreApplication.translate("Widget", u"! - \u041e\u0442\u0440\u0438\u0446\u0430\u043d\u0438\u0435\n"
+"* - \u041a\u043e\u043d\u044a\u044e\u043d\u043a\u0446\u0438\u044f\n"
+"+ - \u0414\u0438\u0437\u044a\u044e\u043d\u043a\u0446\u0438\u044f", None))
         self.input_text_7.setPlaceholderText(QCoreApplication.translate("Widget", u"\u041a\u041d\u0424 \u0444\u0443\u043d\u043a\u0446\u0438\u0438", None))
         self.button_enter_7.setText(QCoreApplication.translate("Widget", u"Enter", None))
-        self.answer_7.setText(QCoreApplication.translate("Widget", u"Answer: ", None))
+        self.answer_7.setText("")
         Widget.setTabText(Widget.indexOf(self.tab_7), QCoreApplication.translate("Widget", u"7", None))
         self.task_8.setText(QCoreApplication.translate("Widget", u"\u041f\u043e\u0441\u0442\u0440\u043e\u0435\u043d\u0438\u0435 \u0421\u0414\u041d\u0424. \u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0432\u0435\u043a\u0442\u043e\u0440 \u0444\u0443\u043d\u043a\u0446\u0438\u0438:", None))
         self.input_text_8.setPlaceholderText(QCoreApplication.translate("Widget", u"\u0412\u0435\u043a\u0442\u043e\u0440 \u0444\u0443\u043d\u043a\u0446\u0438\u0438", None))
