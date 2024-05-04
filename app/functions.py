@@ -1,3 +1,4 @@
+import math
 import random
 import numpy as np
 
@@ -29,8 +30,8 @@ def spaces(stroka, n=1):
 
 # Проверка валидности вводимого вектора функции
 def is_valid(stroka: str):
-    les_s = len(stroka)
-    if stroka.count('0') + stroka.count('1') == les_s and (les_s & (les_s - 1) == 0) and les_s != 0:
+    len_s = len(stroka)
+    if stroka.count('0') + stroka.count('1') == len_s and (len_s & (len_s - 1) == 0) and len_s != 0:
         return True
     return False
 
@@ -207,74 +208,54 @@ def is_cnf(formula, func):
 
 
 def pdnf(bin_func):
-    # Если все биты равны 1, функция тождественно истинна
-    if '1' not in bin_func:
-        return "PDNF does not exist"
-    pdnf_list = []
-    # Преобразование булевой функции в список
-    bin_func_list = list(bin_func)
-    # Определение числа переменных
-    if len(bin_func) == 8:
-        num_vars = int(len(bin_func) ** 0.5) + 1
-    else:
-        num_vars = int(len(bin_func) ** 0.5)
-    # Проход по всем возможным наборам переменных
-    for i in range(2 ** num_vars):
-        # Преобразование индекса в двоичное число
-        bin_index = format(i, '0' + str(num_vars) + 'b')
-        # Проверка условия соответствия булевой функции значению 1
-        if bin_func_list[i] == '1':
-            literals = []
-            # Построение дизъюнкции
-            for j in range(num_vars):
-                if bin_index[j] == '0':
-                    literals.append('~x' + str(j + 1))
+    len_func = len(bin_func)
+    if bin_func.count('1') == 0:
+        return 'Для тождественного нуля не существует СДНФ'
+    number_args = int(math.log2(len_func))
+    args = ['x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7', 'x8', 'x9']
+    terms = []
+
+    for i in range(len_func):
+        if bin_func[i] == '1':
+            term = ''
+            for j in range(number_args):
+                if i // (len_func // 2 ** (j + 1)) % 2 == 0:
+                    x = '!' + args[j]
                 else:
-                    literals.append('x' + str(j + 1))
-            pdnf_list.append("(" + " & ".join(literals) + ")")
-    # Объединение всех дизъюнкций
-    pdnf_expr = ""
-    for i, pdnf_term in enumerate(pdnf_list):
-        pdnf_expr = pdnf_expr + pdnf_term + " | "
-        if (i + 1) % 4 == 0 and i != len(pdnf_list) - 1:
-            pdnf_expr += "\n"
-    return pdnf_expr[:-3]
+                    x = '' + args[j]
+                term += x + '*'
+            terms.append(term)
+            terms[len(terms) - 1] = terms[len(terms) - 1][:-1]
+
+    PDNF = ''
+    for i in range(len(terms)):
+        PDNF += '(' + terms[i] + ')' + '+'
+    PDNF = PDNF[:-1]
+    return PDNF
 
 
 def pcnf(bin_func):
-    # Если все биты равны 0, функция тождественно ложна
-    if '0' not in bin_func:
-        return "PCNF does not exist"
+    len_func = len(bin_func)
+    if bin_func.count('0') == 0:
+        return 'Для тождественной единицы не существует СКНФ'
+    number_args = int(math.log2(len_func))
+    args = ['x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7', 'x8', 'x9']
+    terms = []
 
-    pcnf_list = []
-    # Преобразование булевой функции в список
-    bin_func_list = list(bin_func)
-    # Определение числа переменных
-    if len(bin_func) == 8:
-        num_vars = int(len(bin_func) ** 0.5) + 1
-    else:
-        num_vars = int(len(bin_func) ** 0.5)
-
-    # Проход по всем возможным наборам переменных
-    for i in range(2 ** num_vars):
-        # Преобразование индекса в двоичное число
-        bin_index = format(i, '0' + str(num_vars) + 'b')
-        # Проверка условия соответствия булевой функции значению 0
-        if bin_func_list[i] == '0':
-            literals = []
-            # Построение конъюнкции
-            for j in range(num_vars):
-                if bin_index[j] == '0':
-                    literals.append('x' + str(j + 1))
+    for i in range(len_func):
+        if bin_func[i] == '0':
+            term = ''
+            for j in range(number_args):
+                if i // (len_func // 2 ** (j + 1)) % 2 == 0:
+                    x = '' + args[j]
                 else:
-                    literals.append('~x' + str(j + 1))
-            pcnf_list.append("(" + " & ".join(literals) + ")")
+                    x = '!' + args[j]
+                term += x + '+'
+            terms.append(term)
+            terms[len(terms) - 1] = terms[len(terms) - 1][:-1]
 
-    # Объединение всех конъюнкций с переходом на новую строку после каждых 4
-    pcnf_expr = ""
-    for i, pcnf_term in enumerate(pcnf_list):
-        pcnf_expr += pcnf_term + " | "
-        if (i + 1) % 4 == 0 and i != len(pcnf_list) - 1:
-            pcnf_expr += "\n"
-
-    return pcnf_expr[:-3]
+    PСNF = ''
+    for i in range(len(terms)):
+        PСNF += '(' + terms[i] + ')' + '*'
+    PСNF = PСNF[:-1]
+    return PСNF
