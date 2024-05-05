@@ -329,7 +329,6 @@ def is_monotonous(func):
 
 def is_linear(func):
     polinom_jig = get_polinom_jigalkina(func)
-    print(polinom_jig)
     polinom_jig = polinom_jig.split('xor')
     for elem in polinom_jig:
         if len(elem) > 2:

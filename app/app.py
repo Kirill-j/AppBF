@@ -14,6 +14,10 @@ class Application(QTabWidget, Ui_Widget):
         self.buttons_connections()
         self.answer = "Answer: "
         self.right_button = None
+        self.group_box_11.hide()
+        self.label_3.show()
+        self.radio_button_incomplete.clicked.connect(self.show_11)
+        self.radio_button_full.clicked.connect(self.show_11)
 
     def buttons_connections(self):
         self.button_enter_1.clicked.connect(self.exercise_1)
@@ -30,6 +34,16 @@ class Application(QTabWidget, Ui_Widget):
         self.button_enter_9.clicked.connect(self.exercise_9)
         self.button_start_10.clicked.connect(self.exercise_10)
         self.button_enter_10.clicked.connect(self.exercise_10_check)
+        self.button_start_11.clicked.connect(self.exercise_11)
+        self.button_enter_11.clicked.connect(self.exercise_11_check)
+
+    def show_11(self):
+        if self.radio_button_incomplete.isChecked():
+            self.group_box_11.show()
+            self.label_3.hide()
+        else:
+            self.label_3.show()
+            self.group_box_11.hide()
 
     def exercise_1(self):
         n = self.input_text_1.text()
@@ -174,7 +188,7 @@ class Application(QTabWidget, Ui_Widget):
             functions.error_value(self.answer_9)
 
     def exercise_10(self):
-        self.answer_10.setText('')
+        self.answer_10.setText('Ответ')
         n = random.randint(1, 3)
         self.label_10_func.setText(functions.get_func(n))
         self.check_box_10_save_null.setChecked(False)
@@ -199,3 +213,52 @@ class Application(QTabWidget, Ui_Widget):
             self.answer_10.setText('Wrong\n' + 'Сохраняет 0 -' + str(save_null) + ' Сохраняет 1 -' + str(
                 save_one) + ' Монотонная -' + str(monotonous) + ' Линейная -' + str(
                 linear) + ' Cамодвойственна -' + str(selfdual))
+
+
+    def exercise_11(self):
+        self.answer_10.setText('Ответ')
+        n = random.randint(2, 3)
+        self.label_11_func_1.setText(functions.get_func(n))
+        self.label_11_func_2.setText(functions.get_func(n))
+        self.label_11_func_3.setText(functions.get_func(n))
+        self.label_11_func_4.setText(functions.get_func(n))
+        self.label_11_func_5.setText(functions.get_func(n))
+        self.check_box_11_save_null.setChecked(False)
+        self.check_box_11_save_one.setChecked(False)
+        self.check_box_11_monotonous.setChecked(False)
+        self.check_box_11_linear.setChecked(False)
+        self.check_box_11_selfdual.setChecked(False)
+
+    def exercise_11_check(self):
+        save_null = True
+        save_one = True
+        monotonous = True
+        linear = True
+        selfdual = True
+
+        funcs = [self.label_11_func_1.text(), self.label_11_func_2.text(), self.label_11_func_3.text(),
+                 self.label_11_func_4.text(), self.label_11_func_5.text()]
+        for i in range(5):
+            if not functions.is_save_null(funcs[i]):
+                save_null = False
+            if not functions.is_save_one(funcs[i]):
+                save_one = False
+            if not functions.is_monotonous(funcs[i]):
+                monotonous = False
+            if not functions.is_linear(funcs[i]):
+                linear = False
+            if not functions.is_selfdual(funcs[i]):
+                selfdual = False
+
+        if self.radio_button_full.isChecked():
+            if not (save_null or save_one or monotonous or linear or selfdual):
+                self.answer_11.setText('Right')
+            else:
+                self.answer_11.setText('Wrong')
+        elif self.radio_button_incomplete.isChecked():
+            if not (save_null or save_one or monotonous or linear or selfdual):
+                self.answer_11.setText('Wrong')
+            elif self.check_box_11_save_null.isChecked() == save_null and self.check_box_11_save_one.isChecked() == save_one and self.check_box_11_monotonous.isChecked() == monotonous and self.check_box_11_linear.isChecked() == linear and self.check_box_11_selfdual.isChecked() == selfdual:
+                self.answer_11.setText('Right')
+            else:
+                self.answer_11.setText('Wrong')

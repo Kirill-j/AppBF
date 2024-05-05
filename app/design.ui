@@ -74,7 +74,7 @@ QTabBar {
    <enum>QTabWidget::TabShape::Triangular</enum>
   </property>
   <property name="currentIndex">
-   <number>0</number>
+   <number>10</number>
   </property>
   <widget class="QWidget" name="tab_1">
    <attribute name="title">
@@ -869,7 +869,7 @@ QTabBar {
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_17">
         <item>
-         <widget class="QGroupBox" name="groupBox">
+         <widget class="QGroupBox" name="group_box_10">
           <property name="title">
            <string>Выбери классы</string>
           </property>
@@ -939,6 +939,181 @@ QTabBar {
    <attribute name="title">
     <string>11</string>
    </attribute>
+   <layout class="QVBoxLayout" name="verticalLayout_26" stretch="1,3,1">
+    <item>
+     <widget class="QLabel" name="task_11">
+      <property name="text">
+       <string>Игра. Определи полным или нет является набор функций</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_13">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_25">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_12">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_23">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_22">
+              <item>
+               <widget class="QLabel" name="label_11_func_1">
+                <property name="text">
+                 <string>Вектор Функции</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_11_func_2">
+                <property name="text">
+                 <string>Вектор Функции</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_11_func_3">
+                <property name="text">
+                 <string>Вектор Функции</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_11_func_4">
+                <property name="text">
+                 <string>Вектор Функции</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_11_func_5">
+                <property name="text">
+                 <string>Вектор Функции</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item alignment="Qt::AlignmentFlag::AlignLeft">
+             <widget class="QPushButton" name="button_start_11">
+              <property name="text">
+               <string>Start</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_24">
+            <item>
+             <widget class="QGroupBox" name="groupBox_3">
+              <property name="title">
+               <string>Выбери набор</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_21">
+               <item>
+                <widget class="QRadioButton" name="radio_button_full">
+                 <property name="text">
+                  <string>Набор полный</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="radio_button_incomplete">
+                 <property name="text">
+                  <string>Набор неполный</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignmentFlag::AlignLeft">
+             <widget class="QPushButton" name="button_enter_11">
+              <property name="minimumSize">
+               <size>
+                <width>100</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Enter</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="group_box_11">
+        <property name="title">
+         <string>Выбери классы</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_20">
+         <item>
+          <widget class="QCheckBox" name="check_box_11_save_null">
+           <property name="text">
+            <string>Сохраняющая 0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="check_box_11_save_one">
+           <property name="text">
+            <string>Сохраняющая 1</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="check_box_11_monotonous">
+           <property name="text">
+            <string>Монотонная</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="check_box_11_linear">
+           <property name="text">
+            <string>Линейная</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="check_box_11_selfdual">
+           <property name="text">
+            <string>Самодвойственная</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="answer_11">
+      <property name="text">
+       <string>Ответ</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QWidget" name="tab_12">
    <attribute name="title">
