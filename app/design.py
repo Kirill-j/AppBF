@@ -24,6 +24,12 @@ class Ui_Widget(object):
         if not Widget.objectName():
             Widget.setObjectName(u"Widget")
         Widget.resize(1000, 500)
+        font = QFont()
+        font.setFamilies([u"Comic Sans MS"])
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        Widget.setFont(font)
         Widget.setStyleSheet(u"\n"
 "*{\n"
 "	boder: 5px #FF0000; \n"
@@ -64,7 +70,13 @@ class Ui_Widget(object):
 "\n"
 "#answer_4, #label_function_4 {\n"
 "	font-size: 30pt\n"
-"}")
+"}\n"
+"\n"
+"#label_4_secret { \n"
+"    font-size: 6pt;\n"
+"	color: rgb(110, 110, 110);\n"
+"}\n"
+"")
         Widget.setTabShape(QTabWidget.TabShape.Triangular)
         self.tab_1 = QWidget()
         self.tab_1.setObjectName(u"tab_1")
@@ -182,11 +194,28 @@ class Ui_Widget(object):
         self.tab_4.setObjectName(u"tab_4")
         self.verticalLayout_6 = QVBoxLayout(self.tab_4)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
+        self.horizontalLayout_11 = QHBoxLayout()
+        self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
         self.task_4 = QLabel(self.tab_4)
         self.task_4.setObjectName(u"task_4")
         self.task_4.setWordWrap(True)
 
-        self.verticalLayout_6.addWidget(self.task_4)
+        self.horizontalLayout_11.addWidget(self.task_4)
+
+        self.label_4_secret = QLabel(self.tab_4)
+        self.label_4_secret.setObjectName(u"label_4_secret")
+        font1 = QFont()
+        font1.setFamilies([u"Comic Sans MS"])
+        font1.setPointSize(6)
+        font1.setBold(False)
+        font1.setItalic(False)
+        self.label_4_secret.setFont(font1)
+
+        self.horizontalLayout_11.addWidget(self.label_4_secret, 0, Qt.AlignmentFlag.AlignTop)
+
+        self.horizontalLayout_11.setStretch(0, 1)
+
+        self.verticalLayout_6.addLayout(self.horizontalLayout_11)
 
         self.horizontalLayout_5 = QHBoxLayout()
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
@@ -700,6 +729,7 @@ class Ui_Widget(object):
         self.answer_3.setText(QCoreApplication.translate("Widget", u"Answer: ", None))
         Widget.setTabText(Widget.indexOf(self.tab_3), QCoreApplication.translate("Widget", u"3", None))
         self.task_4.setText(QCoreApplication.translate("Widget", u"\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u00ab\u0438\u043c\u044f\u00bb \u0444\u0443\u043d\u043a\u0446\u0438\u0438 \u043e\u0442 \u0434\u0432\u0443\u0445 \u0430\u0440\u0433\u0443\u043c\u0435\u043d\u0442\u043e\u0432", None))
+        self.label_4_secret.setText("")
         self.label_function_4.setText("")
         self.answer_4.setText("")
         self.button_start_4.setText(QCoreApplication.translate("Widget", u"Start", None))

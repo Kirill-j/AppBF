@@ -10,6 +10,14 @@
     <height>500</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>Comic Sans MS</family>
+    <pointsize>16</pointsize>
+    <italic>false</italic>
+    <bold>false</bold>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Boolean Functions</string>
   </property>
@@ -54,7 +62,13 @@ QTabBar {
 
 #answer_4, #label_function_4 {
 	font-size: 30pt
-}</string>
+}
+
+#label_4_secret { 
+    font-size: 6pt;
+	color: rgb(110, 110, 110);
+}
+</string>
   </property>
   <property name="tabShape">
    <enum>QTabWidget::TabShape::Triangular</enum>
@@ -233,14 +247,33 @@ QTabBar {
    </attribute>
    <layout class="QVBoxLayout" name="verticalLayout_6">
     <item>
-     <widget class="QLabel" name="task_4">
-      <property name="text">
-       <string>Выберите «имя» функции от двух аргументов</string>
-      </property>
-      <property name="wordWrap">
-       <bool>true</bool>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout_11" stretch="1,0">
+      <item>
+       <widget class="QLabel" name="task_4">
+        <property name="text">
+         <string>Выберите «имя» функции от двух аргументов</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignmentFlag::AlignTop">
+       <widget class="QLabel" name="label_4_secret">
+        <property name="font">
+         <font>
+          <family>Comic Sans MS</family>
+          <pointsize>6</pointsize>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_5">
