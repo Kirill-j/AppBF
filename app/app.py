@@ -28,6 +28,8 @@ class Application(QTabWidget, Ui_Widget):
         self.button_enter_7.clicked.connect(self.exercise_7_check)
         self.button_enter_8.clicked.connect(self.exercise_8)
         self.button_enter_9.clicked.connect(self.exercise_9)
+        self.button_start_10.clicked.connect(self.exercise_10)
+        self.button_enter_10.clicked.connect(self.exercise_10_check)
 
     def exercise_1(self):
         n = self.input_text_1.text()
@@ -92,6 +94,8 @@ class Application(QTabWidget, Ui_Widget):
                 button.setText(random_keys)
             button.clicked.connect(lambda _, func=button: self.check_answer_4(func))
 
+        self.label_4_secret.setText(random_key)
+
     def check_answer_4(self, func):
         if self.right_button == func:
             self.answer_4.setText("Right!")
@@ -146,15 +150,14 @@ class Application(QTabWidget, Ui_Widget):
     def exercise_7(self):
         func = functions.get_func(3)
         self.label_6_function.setText(func)
-        return
 
     def exercise_7_check(self):
-        formula = self.input_text_6.text()
+        formula = self.input_text_7.text()
         if formula == '':
-            return self.answer_6.setText('Введите формулу')
+            return self.answer_7.setText('Введите формулу')
 
-        func = self.label_6_function.text()
-        return self.answer_6.setText(functions.is_cnf(formula, func))
+        func = self.label_7_function.text()
+        return self.answer_7.setText(functions.is_cnf(formula, func))
 
     def exercise_8(self):
         bin_func = self.input_text_8.text()
@@ -169,3 +172,30 @@ class Application(QTabWidget, Ui_Widget):
             self.answer_9.setText("PCNF: " + functions.pcnf(bin_func))
         else:
             functions.error_value(self.answer_9)
+
+    def exercise_10(self):
+        self.answer_10.setText('')
+        n = random.randint(1, 3)
+        self.label_10_func.setText(functions.get_func(n))
+        self.check_box_10_save_null.setChecked(False)
+        self.check_box_10_save_one.setChecked(False)
+        self.check_box_10_monotonous.setChecked(False)
+        self.check_box_10_linear.setChecked(False)
+        self.check_box_10_selfdual.setChecked(False)
+
+    def exercise_10_check(self):
+        if self.label_10_func.text() == 'Вектор Функции':
+            self.answer_10.setText('Нажмите старт')
+        func = self.label_10_func.text()
+        save_null = functions.is_save_null(func)
+        save_one = functions.is_save_one(func)
+        monotonous = functions.is_monotonous(func)
+        linear = functions.is_linear(func)
+        selfdual = functions.is_selfdual(func)
+
+        if self.check_box_10_save_null.isChecked() == save_null and self.check_box_10_save_one.isChecked() == save_one and self.check_box_10_monotonous.isChecked() == monotonous and self.check_box_10_linear.isChecked() == linear and self.check_box_10_selfdual.isChecked() == selfdual:
+            self.answer_10.setText('Right')
+        else:
+            self.answer_10.setText('Wrong\n' + 'Сохраняет 0 -' + str(save_null) + ' Сохраняет 1 -' + str(
+                save_one) + ' Монотонная -' + str(monotonous) + ' Линейная -' + str(
+                linear) + ' Cамодвойственна -' + str(selfdual))

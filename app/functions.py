@@ -259,3 +259,86 @@ def pcnf(bin_func):
         PСNF += '(' + terms[i] + ')' + '*'
     PСNF = PСNF[:-1]
     return PСNF
+
+
+def create_truth_table_for_vector(func):
+    truth_table = {}
+    number_args = int(math.log2(len(func)))
+    for i in range(2 ** number_args):
+        truth_table[bin(i)[2:].zfill(number_args)] = func[i]
+    return truth_table
+
+
+# Возвращает полином жигалкина от вектора-функции
+def get_polinom_jigalkina(func):
+    args = ['X1', 'X2', 'X3', 'X4', 'X5', 'X6', 'X7', 'X8', 'X9', ]
+    len_func = len(func)
+    count_args = int(math.log2(len_func))
+    polinom = ''
+    for i in range(len_func):
+        bin_i = bin(i)[2:].zfill(count_args)
+        x = 0
+        for j in range(i + 1):
+            bin_j = bin(j)[2:].zfill(count_args)
+            check = True
+            for k in range(count_args):
+                if bin_i[k] != '1' and bin_j[k] == '1':
+                    check = False
+            if check:
+                x = x ^ int(func[j])
+        if x == 1:
+            if bin_i.count('1') == 0:
+                polinom += '1xor'
+            else:
+                arg = ''
+                for z in range(count_args):
+                    if bin_i[z] == '1':
+                        arg += args[z]
+                polinom += arg + 'xor'
+    return polinom[:-3]
+
+
+def is_save_null(func):
+    if func[0] == '0':
+        return True
+    return False
+
+
+def is_save_one(func):
+    if func[len(func) - 1] == '1':
+        return True
+    return False
+
+
+def is_monotonous(func):
+    number_args = int(math.log2(len(func)))
+    truth_table = create_truth_table_for_vector(func)
+    for i in range(2 ** number_args):
+        bin_i = bin(i)[2:].zfill(number_args)
+        for j in range(i + 1, 2 ** number_args):
+            bin_j = bin(j)[2:].zfill(number_args)
+            check = True
+            for k in range(number_args):
+                if bin_i[k] == '1' and bin_j[k] == '0':
+                    check = False
+            if check:
+                if truth_table[bin_i] > truth_table[bin_j]:
+                    return False
+    return True
+
+
+def is_linear(func):
+    polinom_jig = get_polinom_jigalkina(func)
+    print(polinom_jig)
+    polinom_jig = polinom_jig.split('xor')
+    for elem in polinom_jig:
+        if len(elem) > 2:
+            return False
+    return True
+
+
+def is_selfdual(func):
+    for i in range(len(func) // 2):
+        if func[i] == func[len(func) - i - 1]:
+            return False
+    return True
