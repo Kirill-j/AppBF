@@ -639,37 +639,37 @@ class Ui_Widget(object):
 
         self.verticalLayout_17 = QVBoxLayout()
         self.verticalLayout_17.setObjectName(u"verticalLayout_17")
-        self.groupBox = QGroupBox(self.tab_10)
-        self.groupBox.setObjectName(u"groupBox")
-        self.verticalLayout_16 = QVBoxLayout(self.groupBox)
+        self.group_box_10 = QGroupBox(self.tab_10)
+        self.group_box_10.setObjectName(u"group_box_10")
+        self.verticalLayout_16 = QVBoxLayout(self.group_box_10)
         self.verticalLayout_16.setObjectName(u"verticalLayout_16")
-        self.check_box_10_save_null = QCheckBox(self.groupBox)
+        self.check_box_10_save_null = QCheckBox(self.group_box_10)
         self.check_box_10_save_null.setObjectName(u"check_box_10_save_null")
 
         self.verticalLayout_16.addWidget(self.check_box_10_save_null)
 
-        self.check_box_10_save_one = QCheckBox(self.groupBox)
+        self.check_box_10_save_one = QCheckBox(self.group_box_10)
         self.check_box_10_save_one.setObjectName(u"check_box_10_save_one")
 
         self.verticalLayout_16.addWidget(self.check_box_10_save_one)
 
-        self.check_box_10_monotonous = QCheckBox(self.groupBox)
+        self.check_box_10_monotonous = QCheckBox(self.group_box_10)
         self.check_box_10_monotonous.setObjectName(u"check_box_10_monotonous")
 
         self.verticalLayout_16.addWidget(self.check_box_10_monotonous)
 
-        self.check_box_10_linear = QCheckBox(self.groupBox)
+        self.check_box_10_linear = QCheckBox(self.group_box_10)
         self.check_box_10_linear.setObjectName(u"check_box_10_linear")
 
         self.verticalLayout_16.addWidget(self.check_box_10_linear)
 
-        self.check_box_10_selfdual = QCheckBox(self.groupBox)
+        self.check_box_10_selfdual = QCheckBox(self.group_box_10)
         self.check_box_10_selfdual.setObjectName(u"check_box_10_selfdual")
 
         self.verticalLayout_16.addWidget(self.check_box_10_selfdual)
 
 
-        self.verticalLayout_17.addWidget(self.groupBox)
+        self.verticalLayout_17.addWidget(self.group_box_10)
 
         self.button_enter_10 = QPushButton(self.tab_10)
         self.button_enter_10.setObjectName(u"button_enter_10")
@@ -694,6 +694,143 @@ class Ui_Widget(object):
         Widget.addTab(self.tab_10, "")
         self.tab_11 = QWidget()
         self.tab_11.setObjectName(u"tab_11")
+        self.verticalLayout_26 = QVBoxLayout(self.tab_11)
+        self.verticalLayout_26.setObjectName(u"verticalLayout_26")
+        self.task_11 = QLabel(self.tab_11)
+        self.task_11.setObjectName(u"task_11")
+        self.task_11.setWordWrap(True)
+
+        self.verticalLayout_26.addWidget(self.task_11)
+
+        self.horizontalLayout_13 = QHBoxLayout()
+        self.horizontalLayout_13.setObjectName(u"horizontalLayout_13")
+        self.verticalLayout_25 = QVBoxLayout()
+        self.verticalLayout_25.setObjectName(u"verticalLayout_25")
+        self.horizontalLayout_12 = QHBoxLayout()
+        self.horizontalLayout_12.setObjectName(u"horizontalLayout_12")
+        self.verticalLayout_23 = QVBoxLayout()
+        self.verticalLayout_23.setObjectName(u"verticalLayout_23")
+        self.verticalLayout_22 = QVBoxLayout()
+        self.verticalLayout_22.setObjectName(u"verticalLayout_22")
+        self.label_11_func_1 = QLabel(self.tab_11)
+        self.label_11_func_1.setObjectName(u"label_11_func_1")
+
+        self.verticalLayout_22.addWidget(self.label_11_func_1)
+
+        self.label_11_func_2 = QLabel(self.tab_11)
+        self.label_11_func_2.setObjectName(u"label_11_func_2")
+
+        self.verticalLayout_22.addWidget(self.label_11_func_2)
+
+        self.label_11_func_3 = QLabel(self.tab_11)
+        self.label_11_func_3.setObjectName(u"label_11_func_3")
+
+        self.verticalLayout_22.addWidget(self.label_11_func_3)
+
+        self.label_11_func_4 = QLabel(self.tab_11)
+        self.label_11_func_4.setObjectName(u"label_11_func_4")
+
+        self.verticalLayout_22.addWidget(self.label_11_func_4)
+
+        self.label_11_func_5 = QLabel(self.tab_11)
+        self.label_11_func_5.setObjectName(u"label_11_func_5")
+
+        self.verticalLayout_22.addWidget(self.label_11_func_5)
+
+
+        self.verticalLayout_23.addLayout(self.verticalLayout_22)
+
+        self.button_start_11 = QPushButton(self.tab_11)
+        self.button_start_11.setObjectName(u"button_start_11")
+        self.button_start_11.setMinimumSize(QSize(150, 0))
+
+        self.verticalLayout_23.addWidget(self.button_start_11)
+
+
+        self.horizontalLayout_12.addLayout(self.verticalLayout_23)
+
+        self.verticalLayout_24 = QVBoxLayout()
+        self.verticalLayout_24.setObjectName(u"verticalLayout_24")
+        self.groupBox_3 = QGroupBox(self.tab_11)
+        self.groupBox_3.setObjectName(u"groupBox_3")
+        self.verticalLayout_21 = QVBoxLayout(self.groupBox_3)
+        self.verticalLayout_21.setObjectName(u"verticalLayout_21")
+        self.radio_button_full = QRadioButton(self.groupBox_3)
+        self.radio_button_full.setObjectName(u"radio_button_full")
+
+        self.verticalLayout_21.addWidget(self.radio_button_full)
+
+        self.radio_button_incomplete = QRadioButton(self.groupBox_3)
+        self.radio_button_incomplete.setObjectName(u"radio_button_incomplete")
+
+        self.verticalLayout_21.addWidget(self.radio_button_incomplete)
+
+
+        self.verticalLayout_24.addWidget(self.groupBox_3)
+
+        self.button_enter_11 = QPushButton(self.tab_11)
+        self.button_enter_11.setObjectName(u"button_enter_11")
+
+        self.verticalLayout_24.addWidget(self.button_enter_11)
+
+
+        self.horizontalLayout_12.addLayout(self.verticalLayout_24)
+
+
+        self.verticalLayout_25.addLayout(self.horizontalLayout_12)
+
+
+        self.horizontalLayout_13.addLayout(self.verticalLayout_25)
+
+        self.label_3 = QLabel(self.tab_11)
+        self.label_3.setObjectName(u"label_3")
+
+        self.horizontalLayout_13.addWidget(self.label_3)
+
+        self.group_box_11 = QGroupBox(self.tab_11)
+        self.group_box_11.setObjectName(u"group_box_11")
+        self.verticalLayout_20 = QVBoxLayout(self.group_box_11)
+        self.verticalLayout_20.setObjectName(u"verticalLayout_20")
+        self.check_box_11_save_null = QCheckBox(self.group_box_11)
+        self.check_box_11_save_null.setObjectName(u"check_box_11_save_null")
+
+        self.verticalLayout_20.addWidget(self.check_box_11_save_null)
+
+        self.check_box_11_save_one = QCheckBox(self.group_box_11)
+        self.check_box_11_save_one.setObjectName(u"check_box_11_save_one")
+
+        self.verticalLayout_20.addWidget(self.check_box_11_save_one)
+
+        self.check_box_11_monotonous = QCheckBox(self.group_box_11)
+        self.check_box_11_monotonous.setObjectName(u"check_box_11_monotonous")
+
+        self.verticalLayout_20.addWidget(self.check_box_11_monotonous)
+
+        self.check_box_11_linear = QCheckBox(self.group_box_11)
+        self.check_box_11_linear.setObjectName(u"check_box_11_linear")
+
+        self.verticalLayout_20.addWidget(self.check_box_11_linear)
+
+        self.check_box_11_selfdual = QCheckBox(self.group_box_11)
+        self.check_box_11_selfdual.setObjectName(u"check_box_11_selfdual")
+
+        self.verticalLayout_20.addWidget(self.check_box_11_selfdual)
+
+
+        self.horizontalLayout_13.addWidget(self.group_box_11)
+
+
+        self.verticalLayout_26.addLayout(self.horizontalLayout_13)
+
+        self.answer_11 = QLabel(self.tab_11)
+        self.answer_11.setObjectName(u"answer_11")
+        self.answer_11.setWordWrap(True)
+
+        self.verticalLayout_26.addWidget(self.answer_11)
+
+        self.verticalLayout_26.setStretch(0, 1)
+        self.verticalLayout_26.setStretch(1, 3)
+        self.verticalLayout_26.setStretch(2, 1)
         Widget.addTab(self.tab_11, "")
         self.tab_12 = QWidget()
         self.tab_12.setObjectName(u"tab_12")
@@ -701,7 +838,7 @@ class Ui_Widget(object):
 
         self.retranslateUi(Widget)
 
-        Widget.setCurrentIndex(0)
+        Widget.setCurrentIndex(10)
 
 
         QMetaObject.connectSlotsByName(Widget)
@@ -801,7 +938,7 @@ class Ui_Widget(object):
         self.task_10.setText(QCoreApplication.translate("Widget", u"\u0418\u0433\u0440\u0430. \u0412\u044b\u0431\u0435\u0440\u0438 \u043a\u0430\u043a\u0438\u043c \u043f\u0440\u0435\u0434\u043f\u043e\u043b\u043d\u044b\u043c \u043a\u043b\u0430\u0441\u0441\u0430\u043c \u043f\u0440\u0438\u043d\u0430\u0434\u043b\u0435\u0436\u0438\u0442 \u0444\u0443\u043d\u043a\u0446\u0438\u044f", None))
         self.label_10_func.setText(QCoreApplication.translate("Widget", u"\u0412\u0435\u043a\u0442\u043e\u0440 \u0424\u0443\u043d\u043a\u0446\u0438\u0438", None))
         self.button_start_10.setText(QCoreApplication.translate("Widget", u"Start", None))
-        self.groupBox.setTitle(QCoreApplication.translate("Widget", u"\u0412\u044b\u0431\u0435\u0440\u0438 \u043a\u043b\u0430\u0441\u0441\u044b", None))
+        self.group_box_10.setTitle(QCoreApplication.translate("Widget", u"\u0412\u044b\u0431\u0435\u0440\u0438 \u043a\u043b\u0430\u0441\u0441\u044b", None))
         self.check_box_10_save_null.setText(QCoreApplication.translate("Widget", u"\u0421\u043e\u0445\u0440\u0430\u043d\u044f\u044e\u0449\u0430\u044f 0", None))
         self.check_box_10_save_one.setText(QCoreApplication.translate("Widget", u"\u0421\u043e\u0445\u0440\u0430\u043d\u044f\u044e\u0449\u0430\u044f 1", None))
         self.check_box_10_monotonous.setText(QCoreApplication.translate("Widget", u"\u041c\u043e\u043d\u043e\u0442\u043e\u043d\u043d\u0430\u044f", None))
@@ -810,6 +947,25 @@ class Ui_Widget(object):
         self.button_enter_10.setText(QCoreApplication.translate("Widget", u"Enter", None))
         self.answer_10.setText(QCoreApplication.translate("Widget", u"\u041e\u0442\u0432\u0435\u0442", None))
         Widget.setTabText(Widget.indexOf(self.tab_10), QCoreApplication.translate("Widget", u"10", None))
+        self.task_11.setText(QCoreApplication.translate("Widget", u"\u0418\u0433\u0440\u0430. \u041e\u043f\u0440\u0435\u0434\u0435\u043b\u0438 \u043f\u043e\u043b\u043d\u044b\u043c \u0438\u043b\u0438 \u043d\u0435\u0442 \u044f\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u043d\u0430\u0431\u043e\u0440 \u0444\u0443\u043d\u043a\u0446\u0438\u0439", None))
+        self.label_11_func_1.setText(QCoreApplication.translate("Widget", u"\u0412\u0435\u043a\u0442\u043e\u0440 \u0424\u0443\u043d\u043a\u0446\u0438\u0438", None))
+        self.label_11_func_2.setText(QCoreApplication.translate("Widget", u"\u0412\u0435\u043a\u0442\u043e\u0440 \u0424\u0443\u043d\u043a\u0446\u0438\u0438", None))
+        self.label_11_func_3.setText(QCoreApplication.translate("Widget", u"\u0412\u0435\u043a\u0442\u043e\u0440 \u0424\u0443\u043d\u043a\u0446\u0438\u0438", None))
+        self.label_11_func_4.setText(QCoreApplication.translate("Widget", u"\u0412\u0435\u043a\u0442\u043e\u0440 \u0424\u0443\u043d\u043a\u0446\u0438\u0438", None))
+        self.label_11_func_5.setText(QCoreApplication.translate("Widget", u"\u0412\u0435\u043a\u0442\u043e\u0440 \u0424\u0443\u043d\u043a\u0446\u0438\u0438", None))
+        self.button_start_11.setText(QCoreApplication.translate("Widget", u"Start", None))
+        self.groupBox_3.setTitle(QCoreApplication.translate("Widget", u"\u0412\u044b\u0431\u0435\u0440\u0438 \u043d\u0430\u0431\u043e\u0440", None))
+        self.radio_button_full.setText(QCoreApplication.translate("Widget", u"\u041d\u0430\u0431\u043e\u0440 \u043f\u043e\u043b\u043d\u044b\u0439", None))
+        self.radio_button_incomplete.setText(QCoreApplication.translate("Widget", u"\u041d\u0430\u0431\u043e\u0440 \u043d\u0435\u043f\u043e\u043b\u043d\u044b\u0439", None))
+        self.button_enter_11.setText(QCoreApplication.translate("Widget", u"Enter", None))
+        self.label_3.setText("")
+        self.group_box_11.setTitle(QCoreApplication.translate("Widget", u"\u0412\u044b\u0431\u0435\u0440\u0438 \u043a\u043b\u0430\u0441\u0441\u044b", None))
+        self.check_box_11_save_null.setText(QCoreApplication.translate("Widget", u"\u0421\u043e\u0445\u0440\u0430\u043d\u044f\u044e\u0449\u0430\u044f 0", None))
+        self.check_box_11_save_one.setText(QCoreApplication.translate("Widget", u"\u0421\u043e\u0445\u0440\u0430\u043d\u044f\u044e\u0449\u0430\u044f 1", None))
+        self.check_box_11_monotonous.setText(QCoreApplication.translate("Widget", u"\u041c\u043e\u043d\u043e\u0442\u043e\u043d\u043d\u0430\u044f", None))
+        self.check_box_11_linear.setText(QCoreApplication.translate("Widget", u"\u041b\u0438\u043d\u0435\u0439\u043d\u0430\u044f", None))
+        self.check_box_11_selfdual.setText(QCoreApplication.translate("Widget", u"\u0421\u0430\u043c\u043e\u0434\u0432\u043e\u0439\u0441\u0442\u0432\u0435\u043d\u043d\u0430\u044f", None))
+        self.answer_11.setText(QCoreApplication.translate("Widget", u"\u041e\u0442\u0432\u0435\u0442", None))
         Widget.setTabText(Widget.indexOf(self.tab_11), QCoreApplication.translate("Widget", u"11", None))
         Widget.setTabText(Widget.indexOf(self.tab_12), QCoreApplication.translate("Widget", u"12", None))
     # retranslateUi
