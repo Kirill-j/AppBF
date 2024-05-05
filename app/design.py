@@ -15,9 +15,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QGroupBox, QHBoxLayout, QLabel,
-    QLineEdit, QPushButton, QRadioButton, QSizePolicy,
-    QTabWidget, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QCheckBox, QGroupBox, QHBoxLayout,
+    QLabel, QLineEdit, QPushButton, QRadioButton,
+    QSizePolicy, QTabWidget, QVBoxLayout, QWidget)
 
 class Ui_Widget(object):
     def setupUi(self, Widget):
@@ -582,6 +582,86 @@ class Ui_Widget(object):
         Widget.addTab(self.tab_9, "")
         self.tab_10 = QWidget()
         self.tab_10.setObjectName(u"tab_10")
+        self.verticalLayout_19 = QVBoxLayout(self.tab_10)
+        self.verticalLayout_19.setObjectName(u"verticalLayout_19")
+        self.horizontalLayout_10 = QHBoxLayout()
+        self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
+        self.verticalLayout_18 = QVBoxLayout()
+        self.verticalLayout_18.setObjectName(u"verticalLayout_18")
+        self.task_10 = QLabel(self.tab_10)
+        self.task_10.setObjectName(u"task_10")
+        self.task_10.setWordWrap(True)
+
+        self.verticalLayout_18.addWidget(self.task_10)
+
+        self.label_10_func = QLabel(self.tab_10)
+        self.label_10_func.setObjectName(u"label_10_func")
+
+        self.verticalLayout_18.addWidget(self.label_10_func)
+
+        self.button_start_10 = QPushButton(self.tab_10)
+        self.button_start_10.setObjectName(u"button_start_10")
+        self.button_start_10.setMinimumSize(QSize(150, 0))
+
+        self.verticalLayout_18.addWidget(self.button_start_10, 0, Qt.AlignmentFlag.AlignLeft)
+
+
+        self.horizontalLayout_10.addLayout(self.verticalLayout_18)
+
+        self.verticalLayout_17 = QVBoxLayout()
+        self.verticalLayout_17.setObjectName(u"verticalLayout_17")
+        self.groupBox = QGroupBox(self.tab_10)
+        self.groupBox.setObjectName(u"groupBox")
+        self.verticalLayout_16 = QVBoxLayout(self.groupBox)
+        self.verticalLayout_16.setObjectName(u"verticalLayout_16")
+        self.check_box_10_save_null = QCheckBox(self.groupBox)
+        self.check_box_10_save_null.setObjectName(u"check_box_10_save_null")
+
+        self.verticalLayout_16.addWidget(self.check_box_10_save_null)
+
+        self.check_box_10_save_one = QCheckBox(self.groupBox)
+        self.check_box_10_save_one.setObjectName(u"check_box_10_save_one")
+
+        self.verticalLayout_16.addWidget(self.check_box_10_save_one)
+
+        self.check_box_10_monotonous = QCheckBox(self.groupBox)
+        self.check_box_10_monotonous.setObjectName(u"check_box_10_monotonous")
+
+        self.verticalLayout_16.addWidget(self.check_box_10_monotonous)
+
+        self.check_box_10_linear = QCheckBox(self.groupBox)
+        self.check_box_10_linear.setObjectName(u"check_box_10_linear")
+
+        self.verticalLayout_16.addWidget(self.check_box_10_linear)
+
+        self.check_box_10_selfdual = QCheckBox(self.groupBox)
+        self.check_box_10_selfdual.setObjectName(u"check_box_10_selfdual")
+
+        self.verticalLayout_16.addWidget(self.check_box_10_selfdual)
+
+
+        self.verticalLayout_17.addWidget(self.groupBox)
+
+        self.button_enter_10 = QPushButton(self.tab_10)
+        self.button_enter_10.setObjectName(u"button_enter_10")
+
+        self.verticalLayout_17.addWidget(self.button_enter_10)
+
+
+        self.horizontalLayout_10.addLayout(self.verticalLayout_17)
+
+        self.horizontalLayout_10.setStretch(0, 1)
+
+        self.verticalLayout_19.addLayout(self.horizontalLayout_10)
+
+        self.answer_10 = QLabel(self.tab_10)
+        self.answer_10.setObjectName(u"answer_10")
+        self.answer_10.setWordWrap(True)
+
+        self.verticalLayout_19.addWidget(self.answer_10)
+
+        self.verticalLayout_19.setStretch(0, 3)
+        self.verticalLayout_19.setStretch(1, 1)
         Widget.addTab(self.tab_10, "")
         self.tab_11 = QWidget()
         self.tab_11.setObjectName(u"tab_11")
@@ -592,7 +672,7 @@ class Ui_Widget(object):
 
         self.retranslateUi(Widget)
 
-        Widget.setCurrentIndex(6)
+        Widget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(Widget)
@@ -688,6 +768,17 @@ class Ui_Widget(object):
         self.button_enter_9.setText(QCoreApplication.translate("Widget", u"Enter", None))
         self.answer_9.setText(QCoreApplication.translate("Widget", u"PCNF: ", None))
         Widget.setTabText(Widget.indexOf(self.tab_9), QCoreApplication.translate("Widget", u"9", None))
+        self.task_10.setText(QCoreApplication.translate("Widget", u"\u0418\u0433\u0440\u0430. \u0412\u044b\u0431\u0435\u0440\u0438 \u043a\u0430\u043a\u0438\u043c \u043f\u0440\u0435\u0434\u043f\u043e\u043b\u043d\u044b\u043c \u043a\u043b\u0430\u0441\u0441\u0430\u043c \u043f\u0440\u0438\u043d\u0430\u0434\u043b\u0435\u0436\u0438\u0442 \u0444\u0443\u043d\u043a\u0446\u0438\u044f", None))
+        self.label_10_func.setText(QCoreApplication.translate("Widget", u"\u0412\u0435\u043a\u0442\u043e\u0440 \u0424\u0443\u043d\u043a\u0446\u0438\u0438", None))
+        self.button_start_10.setText(QCoreApplication.translate("Widget", u"Start", None))
+        self.groupBox.setTitle(QCoreApplication.translate("Widget", u"\u0412\u044b\u0431\u0435\u0440\u0438 \u043a\u043b\u0430\u0441\u0441\u044b", None))
+        self.check_box_10_save_null.setText(QCoreApplication.translate("Widget", u"\u0421\u043e\u0445\u0440\u0430\u043d\u044f\u044e\u0449\u0430\u044f 0", None))
+        self.check_box_10_save_one.setText(QCoreApplication.translate("Widget", u"\u0421\u043e\u0445\u0440\u0430\u043d\u044f\u044e\u0449\u0430\u044f 1", None))
+        self.check_box_10_monotonous.setText(QCoreApplication.translate("Widget", u"\u041c\u043e\u043d\u043e\u0442\u043e\u043d\u043d\u0430\u044f", None))
+        self.check_box_10_linear.setText(QCoreApplication.translate("Widget", u"\u041b\u0438\u043d\u0435\u0439\u043d\u0430\u044f", None))
+        self.check_box_10_selfdual.setText(QCoreApplication.translate("Widget", u"\u0421\u0430\u043c\u043e\u0434\u0432\u043e\u0439\u0441\u0442\u0432\u0435\u043d\u043d\u0430\u044f", None))
+        self.button_enter_10.setText(QCoreApplication.translate("Widget", u"Enter", None))
+        self.answer_10.setText(QCoreApplication.translate("Widget", u"\u041e\u0442\u0432\u0435\u0442", None))
         Widget.setTabText(Widget.indexOf(self.tab_10), QCoreApplication.translate("Widget", u"10", None))
         Widget.setTabText(Widget.indexOf(self.tab_11), QCoreApplication.translate("Widget", u"11", None))
         Widget.setTabText(Widget.indexOf(self.tab_12), QCoreApplication.translate("Widget", u"12", None))
